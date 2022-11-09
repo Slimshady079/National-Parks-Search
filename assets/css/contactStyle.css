@@ -1,6 +1,6 @@
 img {
-    width: 125px;
-    height: auto;
+    width: 200px;
+    height: 200px;
     padding: 5px;
     color: white;
     background-color: black;
@@ -13,4 +13,8 @@ h1 {
 
 ul {
     list-style: square;
+}
+
+a {
+    color: blue;
 }
