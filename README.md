@@ -60,7 +60,7 @@ Given a list of activites associated with a park
 When I select a specific activity 
 Then I expect to see a navigation tool (Waze) to help navigate from the selected park to said activity
 
-
+ 
 
 
 
