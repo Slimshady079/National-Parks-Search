@@ -1,0 +1,20 @@
+img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+}
+
+h1 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ul {
+    list-style: square;
+}
+
+a {
+    color: blue;
+}
