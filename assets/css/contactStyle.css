@@ -1,9 +1,16 @@
 img {
     width: 125px;
     height: auto;
+    padding: 5px;
+    color: white;
+    background-color: black;
 }
+
 h1 {
     text-decoration: underline;
     font-weight: bold;
-    
+}
+
+ul {
+    list-style: square;
 }
