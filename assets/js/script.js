@@ -17,12 +17,8 @@ var stateSort = function (response) {
 
       if (response.data[i].parks[x].states === "CO") {
         // if state park code = CO then create new
-        //push {
-        // parkCode: response.data[i].parks[x].parkCode
-        // parkName : response.data[i].parks[x].fullName
-        // parkURL: response.data[i].parks[x].URL
-        // }
         parksArr.push({
+          attraction: [].concat(response.data[i].name),
           parkState: response.data[i].parks[x].states,
           parkCode: response.data[i].parks[x].parkCode,
           parkName: response.data[i].parks[x].fullName,
@@ -34,6 +30,10 @@ var stateSort = function (response) {
   console.log(parksArr);
   return parksArr;
 };
+// //filter: if
+// var newarray = [];
+// response.data.filter((value) => newarray.includes(value));
+// newarray.push(response.data[i]);
 
 //fetch for parks in NPS api
 fetch(url)
