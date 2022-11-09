@@ -27,6 +27,7 @@ var stateSort = function (response) {
     }
   }
   console.log(parksArr);
+  fillSearchOption(parksArr);
   return parksArr;
 };
 // //filter: if
@@ -47,4 +48,12 @@ fetch(url)
     stateSort(response);
   });
 
-for (let i = 0; i < parksArr.length; i++) {}
+var fillSearchOption = function (parksArr) {
+  for (let i = 0; i < parksArr.length; i++) {
+    if (searchFillArr.includes(parksArr[i].parkName)) {
+    } else {
+      searchFillArr = searchFillArr.concat(parksArr[i].parkName);
+    }
+  }
+  console.log(searchFillArr);
+};
