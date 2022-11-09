@@ -1,0 +1,22 @@
+:root {
+    --light: white;
+    --dark: gray;
+}
+
+::selection {}
+
+html {}
+
+body {}
+
+nav {}
+
+header {}
+
+main {}
+
+footer {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
