@@ -10,20 +10,29 @@ var url =
 var parksArr = [];
 
 var stateSort = function (response) {
-  console.log("state Sort");
   for (let i = 0; i < response.data.length; i++) {
     //loop goes through every item in the parks arr inside of Data
     for (let x = 0; x < response.data[i].parks.length; x++) {
       //checks if the parks state code is = to colorado if so then push park fullName into an arr and park actives call .name
+
       if (response.data[i].parks[x].states === "CO") {
-        //check if park code is inside of arr if so dont push
-        //add park code into arr
-        parksArr.push(
-          response.data[i].parks[x].fullName + " " + response.data[i].name
-        );
+        // if state park code = CO then create new
+        //push {
+        // parkCode: response.data[i].parks[x].parkCode
+        // parkName : response.data[i].parks[x].fullName
+        // parkURL: response.data[i].parks[x].URL
+        // }
+        parksArr.push({
+          parkState: response.data[i].parks[x].states,
+          parkCode: response.data[i].parks[x].parkCode,
+          parkName: response.data[i].parks[x].fullName,
+          parkURL: response.data[i].parks[x].url,
+        });
       }
     }
   }
+  console.log(parksArr);
+  return parksArr;
 };
 
 //fetch for parks in NPS api
