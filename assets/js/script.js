@@ -6,8 +6,8 @@ var url =
   "https://developer.nps.gov/api/v1/activities/parks/?api_key=" +
   NPS_key +
   "&limit=50";
-
 var parksArr = [];
+var searchFillArr = [];
 
 var stateSort = function (response) {
   for (let i = 0; i < response.data.length; i++) {
@@ -46,3 +46,5 @@ fetch(url)
     //stateSort function
     stateSort(response);
   });
+
+for (let i = 0; i < parksArr.length; i++) {}
