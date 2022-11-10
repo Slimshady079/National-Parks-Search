@@ -2,11 +2,12 @@ div {
     display: block;
 }
 
-[class*'col-'] {
+/* [class*'col-'] {
     position: relative;
     width: 100%;
-    padding: 15px;
-}
+    padding-right: 15px;
+    padding-left: 15px;
+} */
 
 .flex-row {
     display: flex;
@@ -18,6 +19,26 @@ div {
     min-height: 100vh;
 }
 
+
 button {
     display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+form {
+    padding: 10px;
+    margin: 10px;
+    display: block;
+} */
+
+.home-page {
+    justify-content: center;
+    border: 5px;
+    background-color: black;
+}
+
+h1 {
+    padding: 15px;
 }
