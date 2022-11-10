@@ -97,12 +97,31 @@ var parksArrSearch = function (search, dropDown) {
     console.log("search by park");
     searchResultArr = [];
     //check ever list item if the .parkNAme is = to searchBox value then append to search result list
-    if (parksArr[i].parkName === search) {
-      searchResultArr = searchResultArr.concat(parksArr[i]);
+
+    //new array to combine all parks and park activity
+    for (let i = 0; i < parksArr.length; i++) {
+      if (parksArr[i].parkName === search) {
+        searchResultArr = searchResultArr.concat(parksArr[i]);
+      }
     }
   }
+
   if (search !== "" && dropDown !== "") {
+    //
     console.log("search by park and drop down");
+    searchResultArr = [];
+    firstFilter = [];
+    for (let i = 0; i < parksArr.length; i++) {
+      if (parksArr[i].parkName === search) {
+        firstFilter = firstFilter.concat(parksArr[i]);
+      }
+    }
+    console.log(firstFilter);
+    for (let i = 0; i < firstFilter.length; i++) {
+      if (firstFilter[i].attraction[0] === dropDown) {
+        searchResultArr = searchResultArr.concat(firstFilter[i]);
+      }
+    }
   }
   console.log(searchResultArr);
 };
