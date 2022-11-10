@@ -8,6 +8,7 @@ var url =
   "&limit=50";
 var parksArr = [];
 var searchFillArr = [];
+var searchResultArr = [];
 //DOM vars
 //search elements
 var searchForm = $("#searchForm");
@@ -81,14 +82,29 @@ var parksArrSearch = function (search, dropDown) {
     alert("empty value please enter one");
   }
   if (search === "" && dropDown !== "") {
+    //search by dropdown only
     console.log("search by drop down");
+    searchResultArr = [];
+    for (let i = 0; i < parksArr.length; i++) {
+      //check ever list item if the .activity is = to dropdown value then append to search result list
+      if (parksArr[i].attraction[0] === dropDown) {
+        searchResultArr = searchResultArr.concat(parksArr[i]);
+      }
+    }
   }
   if (search !== "" && dropDown === "") {
+    //checks search by searchBox only
     console.log("search by park");
+    searchResultArr = [];
+    //check ever list item if the .parkNAme is = to searchBox value then append to search result list
+    if (parksArr[i].parkName === search) {
+      searchResultArr = searchResultArr.concat(parksArr[i]);
+    }
   }
   if (search !== "" && dropDown !== "") {
     console.log("search by park and drop down");
   }
+  console.log(searchResultArr);
 };
 
 //onclick for search
