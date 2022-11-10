@@ -92,6 +92,7 @@ var parksArrSearch = function (search, dropDown) {
   //modal saying please enter value
   if (search === "" && dropDown === "") {
     alert("empty value please enter one");
+    return;
   }
   //search by dropdown only
   if (search === "" && dropDown !== "") {
@@ -139,6 +140,8 @@ var parksArrSearch = function (search, dropDown) {
   }
   //return to global scope
   console.log(searchResultArr);
+  //takes user to results page
+  document.location.href = "./results.html";
   return searchResultArr;
 };
 
