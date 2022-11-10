@@ -107,23 +107,27 @@ var parksArrSearch = function (search, dropDown) {
   }
 
   if (search !== "" && dropDown !== "") {
-    //
-    console.log("search by park and drop down");
+    //search by park and drop down
+    //clear arrays
     searchResultArr = [];
     firstFilter = [];
     for (let i = 0; i < parksArr.length; i++) {
+      //first fill the filter array with all items with park name
       if (parksArr[i].parkName === search) {
         firstFilter = firstFilter.concat(parksArr[i]);
       }
     }
     console.log(firstFilter);
+    //then filter park name by activity
     for (let i = 0; i < firstFilter.length; i++) {
       if (firstFilter[i].attraction[0] === dropDown) {
         searchResultArr = searchResultArr.concat(firstFilter[i]);
       }
     }
   }
+  //return to global scope
   console.log(searchResultArr);
+  return searchResultArr;
 };
 
 //onclick for search
