@@ -1,0 +1,19 @@
+div {
+    display: block;
+}
+
+[class*'col-'] {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.min-100-vh {
+    min-height: 100vh;
+}
