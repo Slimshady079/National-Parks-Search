@@ -1,3 +1,2 @@
-import searchResultArr from "./script";
-
-console.log(searchResultArr);
+results = JSON.parse(localStorage.getItem("search"));
+console.log(results);

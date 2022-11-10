@@ -73,6 +73,12 @@ var fillSearchOption = function (parksArr) {
   });
 };
 
+//stringify and store array into local storage
+var storeArr = function (arr) {
+  localStorage.removeItem("search");
+  localStorage.setItem("search", JSON.stringify(arr));
+};
+
 //combine park actives into one fancy object
 var parkActivityCombine = function (arr) {
   //sets a var to the first array element
@@ -141,6 +147,7 @@ var parksArrSearch = function (search, dropDown) {
   //return to global scope
   console.log(searchResultArr);
   //takes user to results page
+  storeArr(searchResultArr);
   document.location.href = "./results.html";
   return searchResultArr;
 };
