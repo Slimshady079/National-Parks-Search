@@ -1,4 +1,20 @@
-img {
+
+#backgroundimg {
+width: 150%;
+height: 150%;
+padding: 0%;
+margin-top: -5px;
+margin-bottom: -1853px;
+
+}
+
+
+.section{
+padding-left: 410px;
+
+}
+
+body div img {
     width: 200px;
     height: 200px;
     padding: 5px;
@@ -6,15 +22,51 @@ img {
     background-color: black;
 }
 
-h1 {
+body h1 {
     text-decoration: underline;
     font-weight: bold;
 }
 
 ul {
     list-style: square;
+    
 }
 
 a {
-    color: blue;
+    color: rgb(0, 0, 0);
+}
+
+header h1{
+    font-size: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    
+}
+header ul{
+    font-size: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0%;
+    text-decoration: underline;
+    
+
+}
+ header a {
+    color: gray;
+ }
+body div ul {
+margin-top: -215px;
+    margin-left: 215px;
+    margin-bottom: 200px;
+}
+
+footer{
+text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+
 }
