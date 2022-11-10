@@ -42,3 +42,17 @@ form {
 h1 {
     padding: 15px;
 }
+
+#resultBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#resultBox div{
+    margin: 2%;
+    background-color: aliceblue;
+    width: 400px;
+    height: 550px;
+    color: black
+}

@@ -57,7 +57,6 @@ fetch(url)
     stateSort(response);
   });
 
-//creates array for search bar auto fill without any repeating values
 var fillSearchOption = function (parksArr) {
   //loops through loop looking for duplicate values in new array if there are none then it adds it to the new array.
   for (let i = 0; i < parksArr.length; i++) {
@@ -71,6 +70,12 @@ var fillSearchOption = function (parksArr) {
   $("#searchBox").autocomplete({
     source: searchFillArr,
   });
+};
+
+//stringify and store array into local storage
+var storeArr = function (arr) {
+  localStorage.removeItem("search");
+  localStorage.setItem("search", JSON.stringify(arr));
 };
 
 //combine park actives into one fancy object
@@ -92,6 +97,7 @@ var parksArrSearch = function (search, dropDown) {
   //modal saying please enter value
   if (search === "" && dropDown === "") {
     alert("empty value please enter one");
+    return;
   }
   //search by dropdown only
   if (search === "" && dropDown !== "") {
@@ -139,6 +145,9 @@ var parksArrSearch = function (search, dropDown) {
   }
   //return to global scope
   console.log(searchResultArr);
+  //takes user to results page
+  storeArr(searchResultArr);
+  document.location.href = "./results.html";
   return searchResultArr;
 };
 
