@@ -50,6 +50,7 @@ fetch(url)
 
 //creates array for search bar auto fill without any repeating values
 var fillSearchOption = function (parksArr) {
+  //loops through loop looking for duplicate values in new array if there are none then it adds it to the new array.
   for (let i = 0; i < parksArr.length; i++) {
     if (searchFillArr.includes(parksArr[i].parkName)) {
     } else {
@@ -57,4 +58,8 @@ var fillSearchOption = function (parksArr) {
     }
   }
   console.log(searchFillArr);
+  //adding autofill with JQuery UI
+  $("#searchBox").autocomplete({
+    source: searchFillArr,
+  });
 };
