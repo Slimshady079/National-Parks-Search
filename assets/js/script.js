@@ -48,6 +48,7 @@ fetch(url)
     stateSort(response);
   });
 
+//creates array for search bar auto fill without any repeating values
 var fillSearchOption = function (parksArr) {
   for (let i = 0; i < parksArr.length; i++) {
     if (searchFillArr.includes(parksArr[i].parkName)) {
