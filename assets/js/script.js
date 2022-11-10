@@ -17,6 +17,8 @@ var stateSort = function (response) {
       if (response.data[i].parks[x].states === "CO") {
         // if state park code = CO then create new object and push to park arr
         parksArr.push({
+          //object keys and values pulled from NPS API
+          //attraction is a empty array to be filled with duplicate park attractions
           attraction: [].concat(response.data[i].name),
           parkState: response.data[i].parks[x].states,
           parkCode: response.data[i].parks[x].parkCode,
@@ -54,6 +56,7 @@ var fillSearchOption = function (parksArr) {
   for (let i = 0; i < parksArr.length; i++) {
     if (searchFillArr.includes(parksArr[i].parkName)) {
     } else {
+      //adding new value to array
       searchFillArr = searchFillArr.concat(parksArr[i].parkName);
     }
   }
