@@ -74,7 +74,16 @@ var fillSearchOption = function (parksArr) {
 };
 
 //combine park actives into one fancy object
-var parkActivityCombine = function () {};
+var parkActivityCombine = function (arr) {
+  //sets a var to the first array element
+  firstItem = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    //add item from arr.attractions to the firstItem attractions array
+    firstItem.attraction.push(arr[i].attraction[0]);
+  }
+  arr = [firstItem];
+  return arr;
+};
 
 //search parks array
 var parksArrSearch = function (search, dropDown) {
@@ -107,6 +116,7 @@ var parksArrSearch = function (search, dropDown) {
         searchResultArr = searchResultArr.concat(parksArr[i]);
       }
     }
+    searchResultArr = parkActivityCombine(searchResultArr);
   }
   //search by park and drop down
   if (search !== "" && dropDown !== "") {
