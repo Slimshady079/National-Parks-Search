@@ -42,3 +42,11 @@ form {
 h1 {
     padding: 15px;
 }
+
+#resultBox div{
+    margin: 2%;
+    background-color: aliceblue;
+    width: 400px;
+    height: 450px;
+    color: black
+}
