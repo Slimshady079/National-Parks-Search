@@ -17,3 +17,7 @@ div {
 .min-100-vh {
     min-height: 100vh;
 }
+
+button {
+    display: block;
+}
