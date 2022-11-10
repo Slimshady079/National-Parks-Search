@@ -8,6 +8,11 @@ var url =
   "&limit=50";
 var parksArr = [];
 var searchFillArr = [];
+//DOM vars
+//search elements
+var searchBox = $("#searchBox");
+var selectBox = $("#select");
+var searchBtn = $("#searchBtn");
 
 var stateSort = function (response) {
   for (let i = 0; i < response.data.length; i++) {
@@ -66,3 +71,12 @@ var fillSearchOption = function (parksArr) {
     source: searchFillArr,
   });
 };
+
+//onclick for search
+searchBtn.click(function (event) {
+  event.preventDefault();
+  search = searchBox.val;
+  // activities = selectBox.val;
+  console.log(search);
+  console.log(activities);
+});
