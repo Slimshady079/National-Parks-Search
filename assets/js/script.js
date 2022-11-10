@@ -10,6 +10,7 @@ var parksArr = [];
 var searchFillArr = [];
 //DOM vars
 //search elements
+var searchForm = $("#searchForm");
 var searchBox = $("#searchBox");
 var selectBox = $("#select");
 var searchBtn = $("#searchBtn");
@@ -75,8 +76,14 @@ var fillSearchOption = function (parksArr) {
 //onclick for search
 searchBtn.click(function (event) {
   event.preventDefault();
-  search = searchBox.val;
-  // activities = selectBox.val;
+  search = searchBox.val();
+  dropDown = selectBox.val();
   console.log(search);
-  console.log(activities);
+  console.log(dropDown);
 });
+
+// searchForm.click(function (event) {
+//   event.preventDefault();
+//   search = searchBox.val();
+//   console.log(search);
+// });
