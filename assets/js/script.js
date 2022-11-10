@@ -73,16 +73,19 @@ var fillSearchOption = function (parksArr) {
   });
 };
 
+//combine park actives into one fancy object
+var parkActivityCombine = function () {};
+
 //search parks array
 var parksArrSearch = function (search, dropDown) {
   console.log(search);
   console.log(dropDown);
+  //modal saying please enter value
   if (search === "" && dropDown === "") {
-    //modal saying please enter value
     alert("empty value please enter one");
   }
+  //search by dropdown only
   if (search === "" && dropDown !== "") {
-    //search by dropdown only
     console.log("search by drop down");
     searchResultArr = [];
     for (let i = 0; i < parksArr.length; i++) {
@@ -92,8 +95,8 @@ var parksArrSearch = function (search, dropDown) {
       }
     }
   }
+  //checks search by searchBox only
   if (search !== "" && dropDown === "") {
-    //checks search by searchBox only
     console.log("search by park");
     searchResultArr = [];
     //check ever list item if the .parkNAme is = to searchBox value then append to search result list
@@ -105,9 +108,8 @@ var parksArrSearch = function (search, dropDown) {
       }
     }
   }
-
+  //search by park and drop down
   if (search !== "" && dropDown !== "") {
-    //search by park and drop down
     //clear arrays
     searchResultArr = [];
     firstFilter = [];
