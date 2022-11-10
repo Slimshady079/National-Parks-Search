@@ -73,16 +73,28 @@ var fillSearchOption = function (parksArr) {
   });
 };
 
+//combine park actives into one fancy object
+var parkActivityCombine = function (arr) {
+  //sets a var to the first array element
+  firstItem = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    //add item from arr.attractions to the firstItem attractions array
+    firstItem.attraction.push(arr[i].attraction[0]);
+  }
+  arr = [firstItem];
+  return arr;
+};
+
 //search parks array
 var parksArrSearch = function (search, dropDown) {
   console.log(search);
   console.log(dropDown);
+  //modal saying please enter value
   if (search === "" && dropDown === "") {
-    //modal saying please enter value
     alert("empty value please enter one");
   }
+  //search by dropdown only
   if (search === "" && dropDown !== "") {
-    //search by dropdown only
     console.log("search by drop down");
     searchResultArr = [];
     for (let i = 0; i < parksArr.length; i++) {
@@ -92,8 +104,8 @@ var parksArrSearch = function (search, dropDown) {
       }
     }
   }
+  //checks search by searchBox only
   if (search !== "" && dropDown === "") {
-    //checks search by searchBox only
     console.log("search by park");
     searchResultArr = [];
     //check ever list item if the .parkNAme is = to searchBox value then append to search result list
@@ -104,10 +116,10 @@ var parksArrSearch = function (search, dropDown) {
         searchResultArr = searchResultArr.concat(parksArr[i]);
       }
     }
+    searchResultArr = parkActivityCombine(searchResultArr);
   }
-
+  //search by park and drop down
   if (search !== "" && dropDown !== "") {
-    //search by park and drop down
     //clear arrays
     searchResultArr = [];
     firstFilter = [];
