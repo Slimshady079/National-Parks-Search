@@ -8,6 +8,12 @@ var url =
   "&limit=50";
 var parksArr = [];
 var searchFillArr = [];
+//DOM vars
+//search elements
+var searchForm = $("#searchForm");
+var searchBox = $("#searchBox");
+var selectBox = $("#select");
+var searchBtn = $("#searchBtn");
 
 var stateSort = function (response) {
   for (let i = 0; i < response.data.length; i++) {
@@ -60,9 +66,35 @@ var fillSearchOption = function (parksArr) {
       searchFillArr = searchFillArr.concat(parksArr[i].parkName);
     }
   }
-  console.log(searchFillArr);
   //adding autofill with JQuery UI
   $("#searchBox").autocomplete({
     source: searchFillArr,
   });
 };
+
+//search parks array
+var parksArrSearch = function (search, dropDown) {
+  console.log(search);
+  console.log(dropDown);
+  if (search === "" && dropDown === "") {
+    //modal saying please enter value
+    alert("empty value please enter one");
+  }
+  if (search === "" && dropDown !== "") {
+    console.log("search by drop down");
+  }
+  if (search !== "" && dropDown === "") {
+    console.log("search by park");
+  }
+  if (search !== "" && dropDown !== "") {
+    console.log("search by park and drop down");
+  }
+};
+
+//onclick for search
+searchBtn.click(function (event) {
+  event.preventDefault();
+  search = searchBox.val();
+  dropDown = selectBox.val();
+  parksArrSearch(search, dropDown);
+});
