@@ -146,7 +146,6 @@ var parksArrSearch = function (search, dropDown) {
   //return to global scope
   console.log(searchResultArr);
   //takes user to results page
-  storeArr(searchResultArr);
   parkInfoSearch();
   // document.location.href = "./results.html";
   return searchResultArr;
@@ -165,6 +164,7 @@ var parksSearchArrAppend = function (response, parksArr) {
     }
   }
   console.log(parksArr);
+  storeArr(searchResultArr);
 };
 
 //gets park description, image, and lon lat from NPS api
