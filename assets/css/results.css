@@ -1,7 +1,10 @@
 div {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    flex-direction: row;
 }
-
+/* is for using bootstrap, easier way to target anything that is a column */
 /* [class*'col-'] {
     position: relative;
     width: 100%;
@@ -19,6 +22,11 @@ div {
     min-height: 100vh;
 }
 
+.home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 button {
     display: block;
@@ -59,6 +67,15 @@ h1 {
 
 #resultBox img{
     margin: 2%;
-    width: 200px;
-    height: 200px
+    width: 90%;
+    height: 200px;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+.url {
+    text-align: center;
 }
