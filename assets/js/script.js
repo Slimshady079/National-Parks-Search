@@ -147,7 +147,7 @@ var parksArrSearch = function (search, dropDown) {
   console.log(searchResultArr);
   //takes user to results page
   parkInfoSearch();
-  // document.location.href = "./results.html";
+  document.location.href = "./results.html";
   return searchResultArr;
 };
 

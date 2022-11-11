@@ -56,3 +56,9 @@ h1 {
     height: 550px;
     color: black
 }
+
+#resultBox img{
+    margin: 2%;
+    width: 200px;
+    height: 200px
+}
