@@ -16,6 +16,10 @@ var searchBox = $("#searchBox");
 var selectBox = $("#select");
 var searchBtn = $("#searchBtn");
 
+//Modal Variables - Getz
+// const myModal = new bootstrap.Modal(document.getElementById('getzModal'), options)
+
+
 var stateSort = function (response) {
   for (let i = 0; i < response.data.length; i++) {
     //loop goes through every item in the parks arr inside of Data
@@ -96,7 +100,8 @@ var parksArrSearch = function (search, dropDown) {
   console.log(dropDown);
   //modal saying please enter value
   if (search === "" && dropDown === "") {
-    alert("empty value please enter one");
+    // removed alert and inserted modal - getz
+    // alert("empty value please enter one");
     return;
   }
   //search by dropdown only
