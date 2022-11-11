@@ -76,6 +76,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
+  document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
@@ -147,7 +148,6 @@ var parksArrSearch = function (search, dropDown) {
   console.log(searchResultArr);
   //takes user to results page
   parkInfoSearch();
-  document.location.href = "./results.html";
   return searchResultArr;
 };
 
