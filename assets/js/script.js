@@ -79,7 +79,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  // document.location.href = "./results.html";
+  document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
