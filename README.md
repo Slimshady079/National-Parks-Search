@@ -20,7 +20,7 @@ Then I expect to see a navigation tool (Waze) to help navigate from the selected
 ## Description
 
 The motivation for this projet was to design an application for searching national parks and associated activities,
-buily by a team collectively and integrating at least two external APIs.
+built by a team collectively and integrating at least two external APIs.
 The desire for such an application was centered around the need to access information effectively, and intuitively per the user's preferences.
 This application serves as a tool to integrate databases into one, easy-to-use, application combining national park locations per-state, and associated activities
 near and around the national park the user searched for.
