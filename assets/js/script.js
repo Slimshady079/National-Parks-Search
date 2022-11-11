@@ -151,6 +151,20 @@ var parksArrSearch = function (search, dropDown) {
   return searchResultArr;
 };
 
+var parkInfoSearch = function () {
+  var url =
+    "https://developer.nps.gov/api/v1/parks?stateCode=CO&api_key=ghDseNHrR36kawXtMRDPM3LL1oBoNJDdwOsQhbve";
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log("parks info");
+      console.log(data);
+    });
+};
+
+parkInfoSearch();
 //onclick for search
 searchBtn.click(function (event) {
   event.preventDefault();
