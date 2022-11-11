@@ -147,10 +147,22 @@ var parksArrSearch = function (search, dropDown) {
   console.log(searchResultArr);
   //takes user to results page
   storeArr(searchResultArr);
-  document.location.href = "./results.html";
+  parkInfoSearch();
+  // document.location.href = "./results.html";
   return searchResultArr;
 };
 
+var parksSearchArrAppend = function (response, parksArr) {
+  for (let i = 0; i < response.data.length; i++) {
+    for (let x = 0; x < parksArr.length; x++) {
+      if (response.data[i].fullName === parksArr[x].parkName) {
+        console.log("got it");
+      }
+    }
+  }
+};
+
+//gets park description, image, and lon lat from NPS api
 var parkInfoSearch = function () {
   var url =
     "https://developer.nps.gov/api/v1/parks?stateCode=CO&api_key=ghDseNHrR36kawXtMRDPM3LL1oBoNJDdwOsQhbve";
@@ -159,12 +171,12 @@ var parkInfoSearch = function () {
       return response.json();
     })
     .then(function (data) {
-      console.log("parks info");
+      var parksInfo = data;
       console.log(data);
+      parksSearchArrAppend(parksInfo, searchResultArr);
     });
 };
 
-parkInfoSearch();
 //onclick for search
 searchBtn.click(function (event) {
   event.preventDefault();
