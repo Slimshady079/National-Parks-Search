@@ -4,13 +4,18 @@ console.log(results);
 for (let i = 0; i < results.length; i++) {
   var box = $("#resultBox");
   var card = $("<div>");
+  card.addClass('card');
   var cardName = $("<p>");
+  cardName.addClass("cardName");
   var state = $("<p>");
+  state.addClass('state');
   var code = $("<p>");
+  code.addClass('code');
   var url = $("<a>");
   var list = $("<ul>");
   var img = $("<img>");
   var description = $("<p>");
+  description.addClass('desc');
 
   //   <iframe src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983"
   //   width="300" height="400"></iframe>

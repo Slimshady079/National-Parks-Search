@@ -1,5 +1,6 @@
 div {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* [class*'col-'] {
@@ -19,6 +20,11 @@ div {
     min-height: 100vh;
 }
 
+.home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 button {
     display: block;
@@ -59,6 +65,10 @@ h1 {
 
 #resultBox img{
     margin: 2%;
-    width: 200px;
+    width: 400px;
     height: 200px
+}
+
+p {
+    margin: 10px;
 }
