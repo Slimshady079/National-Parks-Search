@@ -4,18 +4,20 @@ console.log(results);
 for (let i = 0; i < results.length; i++) {
   var box = $("#resultBox");
   var card = $("<div>");
-  card.addClass('card');
+  card.addClass("card");
   var cardName = $("<p>");
   cardName.addClass("cardName");
   var state = $("<p>");
-  state.addClass('state');
+  state.addClass("state");
   var code = $("<p>");
-  code.addClass('code');
+  code.addClass("code");
   var url = $("<a>");
+  url.addClass("url");
   var list = $("<ul>");
+  list.addClass('list');
   var img = $("<img>");
   var description = $("<p>");
-  description.addClass('desc');
+  description.addClass("desc");
 
   //   <iframe src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983"
   //   width="300" height="400"></iframe>
@@ -34,6 +36,7 @@ for (let i = 0; i < results.length; i++) {
   var wazeFrame = $(
     "<iframe width ='400' height='600' src=" + WazeSrc + "></iframe>"
   );
+  wazeFrame.addClass('wazeFrame');
   card.append(img);
   card.append(description);
   card.append(cardName);
