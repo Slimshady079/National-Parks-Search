@@ -79,7 +79,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  document.location.href = "./results.html";
+  // document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
@@ -162,7 +162,8 @@ var parksSearchArrAppend = function (response, parksArr) {
         //append parksarr[i] object with response.data info
         parksArr[x].img = response.data[i].images[0].url;
         parksArr[x].description = response.data[i].description;
-        parksArr[x].latLong = response.data[i].latLong.split(" ");
+        parksArr[x].lat = response.data[i].latitude;
+        parksArr[x].long = response.data[i].longitude;
       }
     }
   }
