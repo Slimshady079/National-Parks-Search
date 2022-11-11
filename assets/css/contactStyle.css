@@ -1,7 +1,9 @@
 
 #backgroundimg {
-width: 150%;
-height: 150%;
+background-position: center;    
+background-repeat: no-repeat;
+width: 100%;
+height: 100%;
 padding: 0%;
 margin-top: -5px;
 margin-bottom: -1853px;
