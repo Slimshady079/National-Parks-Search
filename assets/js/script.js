@@ -152,14 +152,19 @@ var parksArrSearch = function (search, dropDown) {
   return searchResultArr;
 };
 
+//appends response data to parksArr objects
 var parksSearchArrAppend = function (response, parksArr) {
   for (let i = 0; i < response.data.length; i++) {
     for (let x = 0; x < parksArr.length; x++) {
       if (response.data[i].fullName === parksArr[x].parkName) {
-        console.log("got it");
+        //append parksarr[i] object with response.data info
+        parksArr[x].img = response.data[i].images[0].url;
+        parksArr[x].description = response.data[i].description;
+        parksArr[x].latLong = response.data[i].latLong.split(" ");
       }
     }
   }
+  console.log(parksArr);
 };
 
 //gets park description, image, and lon lat from NPS api
