@@ -76,6 +76,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
+  document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
@@ -146,9 +147,39 @@ var parksArrSearch = function (search, dropDown) {
   //return to global scope
   console.log(searchResultArr);
   //takes user to results page
-  storeArr(searchResultArr);
-  document.location.href = "./results.html";
+  parkInfoSearch();
   return searchResultArr;
+};
+
+//appends response data to parksArr objects
+var parksSearchArrAppend = function (response, parksArr) {
+  for (let i = 0; i < response.data.length; i++) {
+    for (let x = 0; x < parksArr.length; x++) {
+      if (response.data[i].fullName === parksArr[x].parkName) {
+        //append parksarr[i] object with response.data info
+        parksArr[x].img = response.data[i].images[0].url;
+        parksArr[x].description = response.data[i].description;
+        parksArr[x].latLong = response.data[i].latLong.split(" ");
+      }
+    }
+  }
+  console.log(parksArr);
+  storeArr(searchResultArr);
+};
+
+//gets park description, image, and lon lat from NPS api
+var parkInfoSearch = function () {
+  var url =
+    "https://developer.nps.gov/api/v1/parks?stateCode=CO&api_key=ghDseNHrR36kawXtMRDPM3LL1oBoNJDdwOsQhbve";
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var parksInfo = data;
+      console.log(data);
+      parksSearchArrAppend(parksInfo, searchResultArr);
+    });
 };
 
 //onclick for search
