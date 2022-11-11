@@ -103,8 +103,7 @@ var parksArrSearch = function (search, dropDown) {
     //modal saying "please enter value"
     // removed alert and inserted modal - getz
     // alert("empty value please enter one");
-    const myModal = new bootstrap.Modal(document.getElementById('getzModal'))
-
+    // const myModal = new bootstrap.Modal(document.getElementById('getzModal'))
     return;
   }
   //search by dropdown only
