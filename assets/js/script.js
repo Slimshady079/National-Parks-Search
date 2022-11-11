@@ -162,7 +162,8 @@ var parksSearchArrAppend = function (response, parksArr) {
         //append parksarr[i] object with response.data info
         parksArr[x].img = response.data[i].images[0].url;
         parksArr[x].description = response.data[i].description;
-        parksArr[x].latLong = response.data[i].latLong.split(" ");
+        parksArr[x].lat = response.data[i].latitude;
+        parksArr[x].long = response.data[i].longitude;
       }
     }
   }
