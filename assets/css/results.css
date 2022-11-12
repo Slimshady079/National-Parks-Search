@@ -45,8 +45,8 @@ h1 {
 
 #resultBox img{
     margin: 2%;
-    width: 90%;
-    height: 200px;
+    width: 425px;
+    max-height: 265px;
 }
 
 #wazeFrame {
@@ -66,8 +66,10 @@ p {
 .cards {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 2%;
     background-color: aliceblue;
+
     width: 425px;
     height: 1200px;
     color: black
