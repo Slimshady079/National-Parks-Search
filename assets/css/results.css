@@ -1,18 +1,4 @@
 
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-.home-page {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 button {
     display: block;
     padding: 10px;
@@ -24,17 +10,17 @@ form {
     padding: 10px;
     margin: 10px;
     display: block;
-} */
+}
 
-.home-page {
-    justify-content: center;
-    border: 5px;
-    background-color: black;
+p {
+    margin: 10px;
+    text-align: center;
 }
 
 h1 {
     padding: 15px;
 }
+
 
 #resultBox{
     display: flex;
@@ -43,11 +29,6 @@ h1 {
 }
 
 
-.parkImg{
-    margin: 2%;
-    width: 425px;
-    max-height: 265px;
-}
 
 #wazeFrame {
     display: block;
@@ -60,16 +41,26 @@ h1 {
     width: 40px;
     max-height: 40px;
 }
-
-p {
-    margin: 10px;
-    text-align: center;
+#cardName{
+    display: inline;
 }
+
 
 .url {
     text-align: center;
 }
 
+.parkImg{
+    margin-bottom: 2%;
+    width: 425px;
+    max-height: 265px;
+}
+
+.home-page {
+    justify-content: center;
+    border: 5px;
+    background-color: black;
+}
 
 .cards {
     display: flex;
@@ -83,12 +74,29 @@ p {
     color: black
 }
 
-#cardName{
-    display: inline;
-}
-
 .cardTitle {
+    background-color: #4f854a;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 40px;
+    width: 100%;
+    border: #4f854a;
+    border-style: solid;
+    border-radius: 0, 10px,0,10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.home-page {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
 }
