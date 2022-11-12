@@ -59,7 +59,7 @@ h1 {
 }
 #fade{
     position: relative;
-    z-index: 10;
+    z-index: 1;
     height: 500px;
     background-image: linear-gradient(#c2d8de, #f3f3f300)
 }
