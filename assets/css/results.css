@@ -46,6 +46,9 @@ h1 {
 }
 
 
+.mainContent {
+    background-image: linear-gradient(rgb(157, 191, 132), rgb(96, 118, 87));
+}
 .url {
     text-align: center;
 }
