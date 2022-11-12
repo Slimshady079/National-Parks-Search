@@ -1,4 +1,8 @@
 
+body{
+    overflow: visible;
+}
+
 button {
     display: block;
     padding: 10px;
@@ -45,9 +49,23 @@ h1 {
     display: inline;
 }
 
+#footerImgContainer{
+    position: relative;
+    bottom: 500px;
+}
+
+#footerImg{
+    width: 100%;
+}
+#fade{
+    position: relative;
+    z-index: 10;
+    height: 500px;
+    background-image: linear-gradient(#c2d8de, #f3f3f300)
+}
 
 .mainContent {
-    background-image: linear-gradient(rgb(157, 191, 132), rgb(96, 118, 87));
+    background-image: linear-gradient(rgb(161, 180, 152), #c2d8de);
 }
 .url {
     text-align: center;
