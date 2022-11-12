@@ -1,16 +1,4 @@
-div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: auto;
-    flex-direction: row;
-}
-/* is for using bootstrap, easier way to target anything that is a column */
-/* [class*'col-'] {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-} */
+
 
 .flex-row {
     display: flex;
@@ -18,9 +6,6 @@ div {
     flex-wrap: wrap;
 }
 
-.min-100-vh {
-    min-height: 100vh;
-}
 
 .home-page {
     display: flex;
@@ -57,18 +42,15 @@ h1 {
     justify-content: center;
 }
 
-#resultBox div{
-    margin: 2%;
-    background-color: aliceblue;
-    width: 400px;
-    height: 1200px;
-    color: black
-}
 
 #resultBox img{
     margin: 2%;
     width: 90%;
     height: 200px;
+}
+
+#wazeFrame {
+    display: block;
 }
 
 p {
@@ -78,4 +60,15 @@ p {
 
 .url {
     text-align: center;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    background-color: aliceblue;
+    width: 425px;
+    height: 1200px;
+    color: black
 }

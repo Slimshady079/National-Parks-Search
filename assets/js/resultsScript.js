@@ -25,10 +25,11 @@ for (let i = 0; i < results.length; i++) {
   var lat = results[i].lat;
   var long = results[i].long;
   cardName.text(results[i].parkName);
-  state.text(results[i].parkState);
-  code.text(results[i].parkCode);
+  state.text("State Code: " + results[i].parkState);
+  code.text("Park Code: " + results[i].parkCode);
   url.text(results[i].parkURL);
   url.attr("href", results[i].parkURL);
+  url.text("Park Webpage");
   img.attr("src", results[i].img);
   description.text(results[i].description);
   var WazeSrc =
@@ -36,16 +37,19 @@ for (let i = 0; i < results.length; i++) {
   var wazeFrame = $(
     "<iframe width ='400' height='600' src=" + WazeSrc + "></iframe>"
   );
+  wazeFrame.attr("id", "wazeFrame");
   wazeFrame.attr("loading", "lazy");
   wazeFrame.addClass("wazeFrame");
+  card.addClass("cards");
+  //card build
+  card.append(cardName);
   card.append(img);
   card.append(description);
-  card.append(cardName);
+  card.append(list);
   card.append(state);
   card.append(code);
   card.append(url);
   card.append(wazeFrame);
-  card.append(list);
   //loop for attractions
   for (let x = 0; x < results[i].attraction.length; x++) {
     listEl = $("<li>");
