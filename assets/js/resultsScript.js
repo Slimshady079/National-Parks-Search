@@ -76,7 +76,7 @@ function buildCards(results, temp, i) {
   cardTitle.append(cardName);
   // following elements underneath
   card.append(cardTitle);
-  card.addClass("cards");
+  card.addClass("cards pb-3");
   card.append(img);
   card.append(description);
   card.append(list);
