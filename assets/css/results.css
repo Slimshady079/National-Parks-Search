@@ -43,7 +43,7 @@ h1 {
 }
 
 
-#resultBox img{
+.parkImg{
     margin: 2%;
     width: 425px;
     max-height: 265px;
@@ -51,6 +51,14 @@ h1 {
 
 #wazeFrame {
     display: block;
+}
+
+#flagIcon {
+    position: absolute;
+    left: 2px;
+    display: inline;
+    width: 40px;
+    max-height: 40px;
 }
 
 p {
@@ -73,4 +81,14 @@ p {
     width: 425px;
     height: 1200px;
     color: black
+}
+
+#cardName{
+    display: inline;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    height: 40px;
 }
