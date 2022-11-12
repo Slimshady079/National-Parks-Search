@@ -35,8 +35,8 @@ h1 {
 }
 
 #flagIcon {
-    position: absolute;
-    left: 2px;
+    position: inherit;
+    display: inline;
     display: inline;
     width: 40px;
     max-height: 40px;
@@ -69,6 +69,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 2%;
     background-color: aliceblue;
 

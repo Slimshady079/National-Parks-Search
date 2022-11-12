@@ -29,8 +29,6 @@ function buildCards(results, temp, i) {
   //creates elements and adds classes/IDs
   stateFlag = $("<img>");
   stateFlag.attr("id", "flagIcon");
-  //adds bootstrap card class
-  card.addClass("card");
   var cardName = $("<p>");
   cardName.attr("id", "cardName");
   var state = $("<p>");
