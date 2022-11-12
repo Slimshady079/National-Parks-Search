@@ -23,9 +23,12 @@ function currentWeather(lat, lon, i) {
 
 function buildCards(results, temp, i) {
   var card = $("<div>");
+  var cardTitle = $("<div>");
   var box = $("#resultBox");
 
-  //creates elements and adds classes
+  //creates elements and adds classes/IDs
+  stateFlag = $("<img>");
+  stateFlag.attr("id", "flagIcon");
   card.addClass("card");
   var cardName = $("<p>");
   cardName.addClass("cardName");
@@ -41,7 +44,8 @@ function buildCards(results, temp, i) {
   var description = $("<p>");
   description.addClass("desc");
 
-  //adds text content to elements inside card
+  //adds text content and sources to elements inside card
+  stateFlag.attr("src", "./images/coloradoFlagIcon.png");
   cardName.text(results[i].parkName);
   state.text("State Code: " + results[i].parkState);
   code.text("Park Code: " + results[i].parkCode);
@@ -62,6 +66,11 @@ function buildCards(results, temp, i) {
   wazeFrame.addClass("wazeFrame");
 
   //card build
+  //card title
+  cardTitle.append(cardName);
+  cardTitle.append(stateFlag);
+  // following elements underneath
+  card.append(cardTitle);
   card.addClass("cards");
   card.append(cardName);
   card.append(img);
@@ -71,7 +80,6 @@ function buildCards(results, temp, i) {
   card.append(temp);
   card.append(code);
   card.append(url);
-  card.append(wazeFrame);
   //loop for attractions
   for (let x = 0; x < results[i].attraction.length; x++) {
     listEl = $("<li>");
@@ -79,6 +87,7 @@ function buildCards(results, temp, i) {
     list.append(listEl);
   }
   card.append(list);
+  card.append(wazeFrame);
   box.append(card);
 }
 
@@ -88,58 +97,4 @@ for (let i = 0; i < results.length; i++) {
   var long = results[i].long;
   //calls weather function with weather API
   currentWeather(lat, long, i);
-
-  // card.addClass("card");
-  // var cardName = $("<p>");
-  // cardName.addClass("cardName");
-  // var state = $("<p>");
-  // state.addClass("state");
-  // var code = $("<p>");
-  // code.addClass("code");
-  // var url = $("<a>");
-  // url.addClass("url");
-  // var list = $("<ul>");
-  // list.addClass("list");
-  // var img = $("<img>");
-  // var description = $("<p>");
-  // description.addClass("desc");
-
-  // //   <iframe src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983"
-  // //   width="300" height="400"></iframe>
-
-  // cardName.text(results[i].parkName);
-  // state.text("State Code: " + results[i].parkState);
-  // code.text("Park Code: " + results[i].parkCode);
-  // url.text(results[i].parkURL);
-  // url.attr("href", results[i].parkURL);
-  // url.text("Park Webpage");
-  // img.attr("src", results[i].img);
-  // description.text(results[i].description);
-
-  // var WazeSrc =
-  //   "https://embed.waze.com/iframe?zoom=12&lat=" + lat + "&lon=" + long;
-  // var wazeFrame = $(
-  //   "<iframe width ='400' height='600' src=" + WazeSrc + "></iframe>"
-  // );
-  // wazeFrame.attr("id", "wazeFrame");
-  // wazeFrame.attr("loading", "lazy");
-  // wazeFrame.addClass("wazeFrame");
-  // card.addClass("cards");
-  // //card build
-  // card.append(cardName);
-  // card.append(img);
-  // card.append(description);
-  // card.append(list);
-  // card.append(state);
-  // card.append(code);
-  // card.append(url);
-  // card.append(wazeFrame);
-  // //loop for attractions
-  // for (let x = 0; x < results[i].attraction.length; x++) {
-  //   listEl = $("<li>");
-  //   listEl.text(results[i].attraction[x]);
-  //   list.append(listEl);
-  // }
-  // card.append(list);
-  // box.append(card);
 }
