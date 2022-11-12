@@ -72,9 +72,9 @@ h1 {
     flex-direction: column;
     margin: 2%;
     background-color: aliceblue;
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 425px;
-    height: 1200px;
     color: black
 }
 
@@ -85,9 +85,8 @@ h1 {
     justify-content: center;
     height: 40px;
     width: 100%;
-    border: #4f854a;
-    border-style: solid;
-    border-radius: 0, 10px,0,10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .flex-row {
