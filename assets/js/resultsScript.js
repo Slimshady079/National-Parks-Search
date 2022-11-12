@@ -29,6 +29,7 @@ function buildCards(results, temp, i) {
   //creates elements and adds classes/IDs
   stateFlag = $("<img>");
   stateFlag.attr("id", "flagIcon");
+  //adds bootstrap card class
   card.addClass("card");
   var cardName = $("<p>");
   cardName.attr("id", "cardName");
@@ -44,11 +45,13 @@ function buildCards(results, temp, i) {
   img.addClass("parkImg");
   var description = $("<p>");
   description.addClass("desc");
+  var activitiesEl = $("<p>");
 
   //adds text content and sources to elements inside card
   cardTitle.addClass("cardTitle");
   stateFlag.attr("src", "./images/coloradoFlagIcon.png");
   cardName.text(results[i].parkName);
+  activitiesEl.text("Activities");
   state.text("State Code: " + results[i].parkState);
   code.text("Park Code: " + results[i].parkCode);
   url.text(results[i].parkURL);
@@ -81,6 +84,7 @@ function buildCards(results, temp, i) {
   card.append(temp);
   card.append(code);
   card.append(url);
+  card.append(activitiesEl);
   //loop for attractions
   for (let x = 0; x < results[i].attraction.length; x++) {
     listEl = $("<li>");
