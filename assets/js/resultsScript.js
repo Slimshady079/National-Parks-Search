@@ -1,12 +1,36 @@
 results = JSON.parse(localStorage.getItem("search"));
 console.log(results);
 
-for (let i = 0; i < results.length; i++) {
-  var box = $("#resultBox");
+//pulled from my past project -Jackson Grimm
+function currentWeather(lat, lon, i) {
+  var url =
+    "https://api.openweathermap.org/data/2.5/weather?lat=" +
+    lat +
+    "&lon=" +
+    lon +
+    "&units=imperial&appid=569d785adfe9b44db482c835162b2e7a";
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      var temp = $("<p>");
+      temp.text("temperature " + data.main.temp + "F");
+      buildCards(results, temp, i);
+    });
+}
+
+function buildCards(results, temp, i) {
   var card = $("<div>");
-  card.addClass("card");
+  var cardTitle = $("<div>");
+  var box = $("#resultBox");
+
+  //creates elements and adds classes/IDs
+  stateFlag = $("<img>");
+  stateFlag.attr("id", "flagIcon");
   var cardName = $("<p>");
-  cardName.addClass("cardName");
+  cardName.attr("id", "cardName");
   var state = $("<p>");
   state.addClass("state");
   var code = $("<p>");
@@ -16,15 +40,16 @@ for (let i = 0; i < results.length; i++) {
   var list = $("<ul>");
   list.addClass("list");
   var img = $("<img>");
+  img.addClass("parkImg");
   var description = $("<p>");
   description.addClass("desc");
+  var activitiesEl = $("<p>");
 
-  //   <iframe src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983"
-  //   width="300" height="400"></iframe>
-
-  var lat = results[i].lat;
-  var long = results[i].long;
+  //adds text content and sources to elements inside card
+  cardTitle.addClass("cardTitle");
+  stateFlag.attr("src", "./images/coloradoFlagIcon.png");
   cardName.text(results[i].parkName);
+  activitiesEl.text("Activities");
   state.text("State Code: " + results[i].parkState);
   code.text("Park Code: " + results[i].parkCode);
   url.text(results[i].parkURL);
@@ -32,6 +57,8 @@ for (let i = 0; i < results.length; i++) {
   url.text("Park Webpage");
   img.attr("src", results[i].img);
   description.text(results[i].description);
+
+  //waze frame
   var WazeSrc =
     "https://embed.waze.com/iframe?zoom=12&lat=" + lat + "&lon=" + long;
   var wazeFrame = $(
@@ -40,16 +67,22 @@ for (let i = 0; i < results.length; i++) {
   wazeFrame.attr("id", "wazeFrame");
   wazeFrame.attr("loading", "lazy");
   wazeFrame.addClass("wazeFrame");
-  card.addClass("cards");
+
   //card build
-  card.append(cardName);
+  //card title
+  cardTitle.append(stateFlag);
+  cardTitle.append(cardName);
+  // following elements underneath
+  card.append(cardTitle);
+  card.addClass("cards");
   card.append(img);
   card.append(description);
   card.append(list);
   card.append(state);
+  card.append(temp);
   card.append(code);
   card.append(url);
-  card.append(wazeFrame);
+  card.append(activitiesEl);
   //loop for attractions
   for (let x = 0; x < results[i].attraction.length; x++) {
     listEl = $("<li>");
@@ -57,5 +90,14 @@ for (let i = 0; i < results.length; i++) {
     list.append(listEl);
   }
   card.append(list);
+  card.append(wazeFrame);
   box.append(card);
+}
+
+for (let i = 0; i < results.length; i++) {
+  //creates container for cards and cards el
+  var lat = results[i].lat;
+  var long = results[i].long;
+  //calls weather function with weather API
+  currentWeather(lat, long, i);
 }

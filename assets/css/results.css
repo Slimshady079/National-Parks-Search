@@ -1,16 +1,6 @@
 
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-.home-page {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+body{
+    overflow: visible;
 }
 
 button {
@@ -24,17 +14,17 @@ form {
     padding: 10px;
     margin: 10px;
     display: block;
-} */
+}
 
-.home-page {
-    justify-content: center;
-    border: 5px;
-    background-color: black;
+p {
+    margin: 10px;
+    text-align: center;
 }
 
 h1 {
     padding: 15px;
 }
+
 
 #resultBox{
     display: flex;
@@ -43,34 +33,92 @@ h1 {
 }
 
 
-#resultBox img{
-    margin: 2%;
-    width: 425px;
-    max-height: 265px;
-}
 
 #wazeFrame {
     display: block;
 }
 
-p {
-    margin: 10px;
-    text-align: center;
+#flagIcon {
+    position: inherit;
+    display: inline;
+    display: inline;
+    width: 40px;
+    max-height: 40px;
+}
+#cardName{
+    display: inline;
 }
 
+#footerImgContainer{
+    position: relative;
+    bottom: 500px;
+}
+
+#footerImg{
+    width: 100%;
+}
+#fade{
+    position: relative;
+    z-index: 1;
+    height: 500px;
+    background-image: linear-gradient(#c2d8de, #f3f3f300)
+}
+
+.mainContent {
+    background-image: linear-gradient(rgb(161, 180, 152), #c2d8de);
+}
 .url {
     text-align: center;
 }
 
+.parkImg{
+    margin-bottom: 2%;
+    width: 425px;
+    max-height: 265px;
+}
+
+.home-page {
+    justify-content: center;
+    border: 5px;
+    background-color: black;
+}
 
 .cards {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 2%;
     background-color: aliceblue;
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 425px;
-    height: 1200px;
+    height: 1300px;
     color: black
+}
+
+.cardTitle {
+    background-color: #4f854a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.home-page {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
 }
