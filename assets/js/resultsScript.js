@@ -27,6 +27,8 @@ function buildCards(results, temp, i) {
   var box = $("#resultBox");
 
   //creates elements and adds classes/IDs
+  var lat = results[i].lat;
+  var long = results[i].long;
   stateFlag = $("<img>");
   stateFlag.attr("id", "flagIcon");
   var cardName = $("<p>");
