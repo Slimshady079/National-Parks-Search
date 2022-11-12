@@ -14,7 +14,7 @@ for (let i = 0; i < results.length; i++) {
   var url = $("<a>");
   url.addClass("url");
   var list = $("<ul>");
-  list.addClass('list');
+  list.addClass("list");
   var img = $("<img>");
   var description = $("<p>");
   description.addClass("desc");
@@ -36,7 +36,8 @@ for (let i = 0; i < results.length; i++) {
   var wazeFrame = $(
     "<iframe width ='400' height='600' src=" + WazeSrc + "></iframe>"
   );
-  wazeFrame.addClass('wazeFrame');
+  wazeFrame.attr("loading", "lazy");
+  wazeFrame.addClass("wazeFrame");
   card.append(img);
   card.append(description);
   card.append(cardName);
