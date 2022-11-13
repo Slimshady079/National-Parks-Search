@@ -49,7 +49,7 @@ function buildCards(results, temp, i) {
 
   //adds text content and sources to elements inside card
   cardTitle.addClass("cardTitle");
-  stateFlag.attr("src", "./images/coloradoFlagIcon.png");
+  stateFlag.attr("src", results[i].flag);
   cardName.text(results[i].parkName);
   activitiesEl.text("Activities");
   state.text("State Code: " + results[i].parkState);
