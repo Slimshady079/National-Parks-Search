@@ -90,7 +90,20 @@ var returnGlobal = function (response) {
   return npsData;
 };
 
-var stateSort = function (response, state) {
+var stateSort = function (response, state, search) {
+  //checks if state search is blank
+  if (state === "") {
+    for (let i = 0; i < response.data.length; i++) {
+      for (let x = 0; x < response.data[i].parks.length; x++) {
+        if (response.data[i].parks[x].fullName === search) {
+          state = response.data[i].parks[x].states;
+          console.log(state);
+          break;
+        }
+      }
+    }
+  }
+  //if user has a state value
   for (let i = 0; i < response.data.length; i++) {
     //loop goes through every item in the parks arr inside of Data
     for (let x = 0; x < response.data[i].parks.length; x++) {
@@ -111,7 +124,6 @@ var stateSort = function (response, state) {
   }
   console.log(parksArr);
   //change this arr to be all parks
-  fillSearchOption(parksArr);
   return parksArr;
 };
 // //filter: if
@@ -137,7 +149,6 @@ fetch(url)
 
 //auto complete national parks arr
 var fillSearchOption = function (object) {
-  console.log(object);
   //loops through loop looking for duplicate values in new array if there are none then it adds it to the new array.
   for (let i = 0; i < object.data.length; i++) {
     for (let x = 0; x < object.data[i].parks.length; x++) {
@@ -164,11 +175,12 @@ var fillSearchOption = function (object) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  // document.location.href = "./results.html";
+  document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
 var parkActivityCombine = function (arr) {
+  console.log("parks combine" + arr);
   //sets a var to the first array element
   firstItem = arr[0];
   for (let i = 0; i < arr.length; i++) {
@@ -184,11 +196,11 @@ var parksArrSearch = function (search, dropDown, state) {
   console.log(search);
   console.log(dropDown);
   //modal saying please enter value
-  if ((search === "" && dropDown === "") || state === "") {
+  if (search === "" && dropDown === "" && state === "") {
     $("#myModal").modal();
     return;
   }
-  //search by dropdown only
+
   if (search === "" && dropDown !== "") {
     console.log("search by drop down");
     searchResultArr = [];
@@ -282,6 +294,6 @@ searchBtn.click(function (event) {
   search = searchBox.val();
   dropDown = selectBox.val();
   state = stateSearchBox.val();
-  stateSort(npsData, state);
+  stateSort(npsData, state, search);
   parksArrSearch(search, dropDown, state);
 });
