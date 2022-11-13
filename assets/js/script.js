@@ -141,7 +141,7 @@ var parksArrSearch = function (search, dropDown, state) {
   console.log(search);
   console.log(dropDown);
   //modal saying please enter value
-  if (search === "" && dropDown === "") {
+  if ((search === "" && dropDown === "") || state === "") {
     $("#myModal").modal();
     return;
   }
