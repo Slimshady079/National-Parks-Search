@@ -9,6 +9,7 @@ var url =
 var parksArr = [];
 var searchFillArr = [];
 var searchResultArr = [];
+var stateFlagArr = {};
 //DOM vars
 //search elements
 var searchForm = $("#searchForm");
