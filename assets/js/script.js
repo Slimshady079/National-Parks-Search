@@ -40,6 +40,38 @@ var stateFlags = {
   WV: "./images/flags/icons8-west-virginia-flag-100.png",
   WY: "./images/flags/icons8-wyoming-flag-100.png",
 };
+var stateCodeArr = [
+  "AK",
+  "AZ",
+  "AR",
+  "CA",
+  "CO",
+  "FL",
+  "HI",
+  "ID",
+  "IN",
+  "KY",
+  "ME",
+  "MI",
+  "MN",
+  "MT",
+  "NV",
+  "NM",
+  "NC",
+  "ND",
+  "OH",
+  "OR",
+  "SC",
+  "SD",
+  "TN",
+  "TX",
+  "UT",
+  "VA",
+  "WA",
+  "WV",
+  "WY",
+];
+
 var response = {};
 //DOM vars
 //search elements
@@ -98,6 +130,7 @@ fetch(url)
     //stateSort function
     console.log("NPS API DATE RECEIVED");
     // stateSort(response);
+    fillSearchOption(response);
     returnGlobal(response);
   });
 
@@ -114,6 +147,10 @@ var fillSearchOption = function (parksArr) {
   //adding autofill with JQuery UI
   $("#searchBox").autocomplete({
     source: searchFillArr,
+  });
+  //state code
+  $("#stateSearchBox").autocomplete({
+    source: stateCodeArr,
   });
 };
 
