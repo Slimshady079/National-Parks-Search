@@ -84,11 +84,21 @@ nav img:hover {
 
 
 .banner {
-    height: 5%;
-    background-image: url("../../images/maps_background.jpg");
-    background-position: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 
-}
+
+    /* background image  */
+    height: 7%;
+    background-image: url("../../images/campingBanner.jpg");
+    filter: grayscale(50%);
+    background-size: 100%;
+    background-position: center 55%;}
+
+
+
 .mainContent {
     background-image: linear-gradient(rgb(172, 191, 166), #c2d8de);
 }
