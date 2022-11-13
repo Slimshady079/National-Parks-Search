@@ -25,6 +25,24 @@ h1 {
     padding: 15px;
 }
 
+nav img {
+    width: 75%;
+}
+
+nav img:hover {
+    animation: roll 0.5s;
+    animation-iteration-count: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(3px 3px 2px rgb(158, 155, 155));
+}
+
+
+/* navbar animation  */
+@keyframes roll{
+   10%{transform: rotate(72deg);} 
+   100%{transform: rotate(360deg);} 
+}
+
 
 #resultBox{
     display: flex;
@@ -65,7 +83,7 @@ h1 {
 }
 
 .mainContent {
-    background-image: linear-gradient(rgb(161, 180, 152), #c2d8de);
+    background-image: linear-gradient(rgb(172, 191, 166), #c2d8de);
 }
 .url {
     text-align: center;
