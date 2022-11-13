@@ -94,7 +94,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  // document.location.href = "./results.html";
+  document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
@@ -110,7 +110,7 @@ var parkActivityCombine = function (arr) {
 };
 
 //search parks array
-var parksArrSearch = function (search, dropDown) {
+var parksArrSearch = function (search, dropDown, state) {
   console.log(search);
   console.log(dropDown);
   //modal saying please enter value
@@ -165,7 +165,7 @@ var parksArrSearch = function (search, dropDown) {
   //return to global scope
   console.log(searchResultArr);
   //takes user to results page
-  parkInfoSearch();
+  parkInfoSearch(state);
   return searchResultArr;
 };
 
@@ -187,9 +187,11 @@ var parksSearchArrAppend = function (response, parksArr) {
 };
 
 //gets park description, image, and lon lat from NPS api
-var parkInfoSearch = function () {
+var parkInfoSearch = function (state) {
   var url =
-    "https://developer.nps.gov/api/v1/parks?stateCode=CO&api_key=ghDseNHrR36kawXtMRDPM3LL1oBoNJDdwOsQhbve";
+    "https://developer.nps.gov/api/v1/parks?stateCode=" +
+    state +
+    "&api_key=ghDseNHrR36kawXtMRDPM3LL1oBoNJDdwOsQhbve";
   fetch(url)
     .then(function (response) {
       return response.json();
@@ -210,5 +212,5 @@ searchBtn.click(function (event) {
   dropDown = selectBox.val();
   state = stateSearchBox.val();
   stateSort(npsData, state);
-  parksArrSearch(search, dropDown);
+  parksArrSearch(search, dropDown, state);
 });
