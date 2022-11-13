@@ -124,7 +124,7 @@ var stateSort = function (response, state, search) {
   }
   console.log(parksArr);
   //change this arr to be all parks
-  return parksArr;
+  parksArrSearch(search, dropDown, state);
 };
 // //filter: if
 // var newarray = [];
@@ -295,5 +295,4 @@ searchBtn.click(function (event) {
   dropDown = selectBox.val();
   state = stateSearchBox.val();
   stateSort(npsData, state, search);
-  parksArrSearch(search, dropDown, state);
 });
