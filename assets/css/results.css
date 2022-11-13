@@ -113,6 +113,20 @@ nav img:hover {
     color: black
 }
 
+.cards:hover {
+    animation: cardsHover 0.5s;
+    animation-iteration-count: 1;
+   transform: scale(1.010); 
+    box-shadow: 5px 8px 3px rgba(128, 128, 128, 0.284);
+}
+
+@keyframes cardsHover{
+    0%{transform: scale(1.002);} 
+    100%{transform: scale(1.010);} 
+
+}
+
+
 .cardTitle {
     background-color: #4f854a;
     display: flex;
