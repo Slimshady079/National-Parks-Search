@@ -9,6 +9,10 @@ var url =
 var parksArr = [];
 var searchFillArr = [];
 var searchResultArr = [];
+var stateFlagArr = {
+  AK: "./images/flags/icons8-alaska-flag-100.png",
+  AR: "./images/flags/icons8-arkansas-flag-100.png",
+};
 //DOM vars
 //search elements
 var searchForm = $("#searchForm");
