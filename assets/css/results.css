@@ -82,6 +82,13 @@ nav img:hover {
     background-image: linear-gradient(#c2d8de, #f3f3f300)
 }
 
+
+.banner {
+    height: 5%;
+    background-image: url("../../images/maps_background.jpg");
+    background-position: 20px 30px;
+
+}
 .mainContent {
     background-image: linear-gradient(rgb(172, 191, 166), #c2d8de);
 }
