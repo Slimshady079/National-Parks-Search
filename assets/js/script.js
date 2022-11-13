@@ -13,22 +13,29 @@ var stateFlagArr = {
   AK: "./images/flags/icons8-alaska-flag-100.png",
   AR: "./images/flags/icons8-arkansas-flag-100.png",
 };
+var response = {};
 //DOM vars
 //search elements
 var searchForm = $("#searchForm");
 var searchBox = $("#searchBox");
+var stateSearchBox = $("#stateSearchBox");
 var selectBox = $("#select");
 var searchBtn = $("#searchBtn");
 
 //Modal Variables - Getz
 // const myModal = new bootstrap.Modal(document.getElementById('getzModal'), options)
 
-var stateSort = function (response) {
+var returnGlobal = function (response) {
+  npsData = response;
+  return npsData;
+};
+
+var stateSort = function (response, state) {
   for (let i = 0; i < response.data.length; i++) {
     //loop goes through every item in the parks arr inside of Data
     for (let x = 0; x < response.data[i].parks.length; x++) {
       //checks if the parks state code is = to colorado if so then push park fullName into an arr and park actives call .name
-      if (response.data[i].parks[x].states === "CO") {
+      if (response.data[i].parks[x].states === state) {
         // if state park code = CO then create new object and push to park arr
         parksArr.push({
           //object keys and values pulled from NPS API
@@ -43,6 +50,7 @@ var stateSort = function (response) {
     }
   }
   console.log(parksArr);
+  //change this arr to be all parks
   fillSearchOption(parksArr);
   return parksArr;
 };
@@ -61,9 +69,12 @@ fetch(url)
     //console logs all response from API
     console.log(response);
     //stateSort function
-    stateSort(response);
+    console.log("NPS API DATE RECEIVED");
+    // stateSort(response);
+    returnGlobal(response);
   });
 
+//auto complete national parks arr
 var fillSearchOption = function (parksArr) {
   //loops through loop looking for duplicate values in new array if there are none then it adds it to the new array.
   for (let i = 0; i < parksArr.length; i++) {
@@ -83,7 +94,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  document.location.href = "./results.html";
+  // document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
@@ -190,10 +201,14 @@ var parkInfoSearch = function () {
     });
 };
 
+var npsData = [];
+
 //onclick for search
 searchBtn.click(function (event) {
   event.preventDefault();
   search = searchBox.val();
   dropDown = selectBox.val();
+  state = stateSearchBox.val();
+  stateSort(npsData, state);
   parksArrSearch(search, dropDown);
 });
