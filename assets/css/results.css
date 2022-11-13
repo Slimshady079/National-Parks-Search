@@ -1,16 +1,6 @@
 
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-.home-page {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+body{
+    overflow: visible;
 }
 
 button {
@@ -24,17 +14,35 @@ form {
     padding: 10px;
     margin: 10px;
     display: block;
-} */
+}
 
-.home-page {
-    justify-content: center;
-    border: 5px;
-    background-color: black;
+p {
+    margin: 10px;
+    text-align: center;
 }
 
 h1 {
     padding: 15px;
 }
+
+nav img {
+    width: 75%;
+}
+
+nav img:hover {
+    animation: roll 0.5s;
+    animation-iteration-count: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(3px 3px 2px rgb(158, 155, 155));
+}
+
+
+/* navbar animation  */
+@keyframes roll{
+   10%{transform: rotate(72deg);} 
+   100%{transform: rotate(360deg);} 
+}
+
 
 #resultBox{
     display: flex;
@@ -43,34 +51,122 @@ h1 {
 }
 
 
-#resultBox img{
-    margin: 2%;
-    width: 425px;
-    max-height: 265px;
-}
 
 #wazeFrame {
     display: block;
 }
 
-p {
-    margin: 10px;
-    text-align: center;
+#flagIcon {
+    position: inherit;
+    display: inline;
+    display: inline;
+    width: 40px;
+    max-height: 40px;
+}
+#cardName{
+    display: inline;
 }
 
+#footerImgContainer{
+    position: relative;
+    bottom: 500px;
+}
+
+#footerImg{
+    width: 100%;
+}
+#fade{
+    position: relative;
+    z-index: 1;
+    height: 500px;
+    background-image: linear-gradient(#c2d8de, #f3f3f300)
+}
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+
+    /* background image  */
+    height: 7%;
+    background-image: url("../../images/campingBanner.jpg");
+    filter: grayscale(50%);
+    background-size: 100%;
+    background-position: center 55%;}
+
+
+
+.mainContent {
+    background-image: linear-gradient(rgb(172, 191, 166), #c2d8de);
+    padding-bottom: 35%;
+}
 .url {
     text-align: center;
 }
 
+.parkImg{
+    margin-bottom: 2%;
+    width: 100%;
+    max-height: 255px;
+}
+
+.home-page {
+    justify-content: center;
+    border: 5px;
+    background-color: black;
+}
 
 .cards {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 2%;
     background-color: aliceblue;
-
-    width: 425px;
-    height: 1200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 414px;
     color: black
+}
+
+.cards:hover {
+    animation: cardsHover 0.5s;
+    animation-iteration-count: 1;
+   transform: scale(1.010); 
+    box-shadow: 5px 8px 3px rgba(128, 128, 128, 0.284);
+}
+
+@keyframes cardsHover{
+    0%{transform: scale(1.002);} 
+    100%{transform: scale(1.010);} 
+
+}
+
+
+.cardTitle {
+    background-color: #4f854a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.home-page {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
 }
