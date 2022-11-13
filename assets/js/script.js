@@ -86,6 +86,7 @@ var searchBtn = $("#searchBtn");
 
 var returnGlobal = function (response) {
   npsData = response;
+  fillSearchOption(response);
   return npsData;
 };
 
@@ -135,21 +136,26 @@ fetch(url)
   });
 
 //auto complete national parks arr
-var fillSearchOption = function (parksArr) {
+var fillSearchOption = function (object) {
+  console.log(object);
   //loops through loop looking for duplicate values in new array if there are none then it adds it to the new array.
-  for (let i = 0; i < parksArr.length; i++) {
-    if (searchFillArr.includes(parksArr[i].parkName)) {
-    } else {
-      //adding new value to array
-      searchFillArr = searchFillArr.concat(parksArr[i].parkName);
+  for (let i = 0; i < object.data.length; i++) {
+    for (let x = 0; x < object.data[i].parks.length; x++) {
+      if (searchFillArr.includes(object.data[i].parks[x].fullName)) {
+      } else {
+        //adding new value to array
+        searchFillArr = searchFillArr.concat(object.data[i].parks[x].fullName);
+      }
     }
   }
   //adding autofill with JQuery UI
   $("#searchBox").autocomplete({
+    autoFocus: true,
     source: searchFillArr,
   });
   //state code
   $("#stateSearchBox").autocomplete({
+    autoFocus: true,
     source: stateCodeArr,
   });
 };
@@ -158,7 +164,7 @@ var fillSearchOption = function (parksArr) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  document.location.href = "./results.html";
+  // document.location.href = "./results.html";
 };
 
 //combine park actives into one fancy object
