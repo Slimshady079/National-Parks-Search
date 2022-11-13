@@ -14,7 +14,7 @@ var stateFlags = {
   AZ: "./images/flags/icons8-arizona-flag-100.png",
   AR: "./images/flags/icons8-arkansas-flag-100.png",
   CA: "./images/flags/icons8-california-flag-100.png",
-  CO: "./images/flags/icons8-colorado-flag-100.png",
+  CO: "./images/flags/coloradoFlagIcon.png",
   FL: "./images/flags/icons8-florida-flag-100.png",
   HI: "./images/flags/icons8-hawaii-flag-100.png",
   ID: "./images/flags/icons8-idaho-flag-100.png",
