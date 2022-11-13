@@ -91,8 +91,8 @@ nav img:hover {
 
 .parkImg{
     margin-bottom: 2%;
-    width: 425px;
-    max-height: 265px;
+    width: 100%;
+    max-height: 255px;
 }
 
 .home-page {
@@ -103,14 +103,13 @@ nav img:hover {
 
 .cards {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 2%;
     background-color: aliceblue;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 425px;
+    width: 414px;
     color: black
 }
 
