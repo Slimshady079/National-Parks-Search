@@ -195,8 +195,18 @@ var parkActivityCombine = function (arr) {
 var parksArrSearch = function (search, dropDown, state) {
   console.log(search);
   console.log(dropDown);
-  //modal saying please enter value
+  //error test cases
   if (search === "" && dropDown === "" && state === "") {
+    $("#myModal").modal();
+    return;
+  }
+
+  if (dropDown === "" && state !== "") {
+    $("#myModal").modal();
+    return;
+  }
+
+  if (dropDown !== "" && state === "") {
     $("#myModal").modal();
     return;
   }
