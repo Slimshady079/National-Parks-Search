@@ -79,7 +79,7 @@ var searchForm = $("#searchForm");
 var searchBox = $("#searchBox");
 var stateSearchBox = $("#stateSearchBox");
 var selectBox = $("#select");
-var searchBtn = $("#searchBtn");
+var searchBtn = $("#search");
 
 //Modal Variables - Getz
 // const myModal = new bootstrap.Modal(document.getElementById('getzModal'), options)

@@ -107,9 +107,11 @@ nav img {
 }
 
 #select{
+    height: 100%;
     border-color: transparent;
-    background-color:#198754;
+    background-color:#bae9d3;
     color:white;
+    font-size: large;
 }
 
 #search{
@@ -132,6 +134,20 @@ nav img {
 
 }
 
+.ui-autocomplete {
+    list-style: none;
+    background-color: white;
+    width: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+* html .ui-autocomplete {
+width: 100px;
+max-height: 100px;
+background-color: white;
+  }
 
 @media (max-width: 768px){
     .ImgHead{
