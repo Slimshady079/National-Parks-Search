@@ -96,10 +96,17 @@ function buildCards(results, temp, i) {
   box.append(card);
 }
 
-for (let i = 0; i < results.length; i++) {
-  //creates container for cards and cards el
-  var lat = results[i].lat;
-  var long = results[i].long;
-  //calls weather function with weather API
-  currentWeather(lat, long, i);
+//checks if local storage value is empty
+
+if (results.length !== 0) {
+  for (let i = 0; i < results.length; i++) {
+    //creates container for cards and cards el
+    var lat = results[i].lat;
+    var long = results[i].long;
+    //calls weather function with weather API
+    currentWeather(lat, long, i);
+  }
+} else {
+  //max add code here
+  console.log("no value");
 }
