@@ -1,0 +1,23 @@
+nav img:hover {
+    animation: roll 0.5s;
+    animation-iteration-count: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(3px 3px 2px rgb(158, 155, 155));
+}
+/* targets whole html */
+:root {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: green;
+}
+
+p {
+    font-size: 1.3rem;
+    margin: 15px;
+    color: white;
+}
+
+div {
+    background-color: green;
+}
