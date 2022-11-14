@@ -2,12 +2,12 @@
 
 ## User Story
 
-As an outdoor enthusiast, I want to be able to search a database of national parks (specifically in Colorado) to be able to plan
+As an outdoor enthusiast, I want to be able to search a database of national parks to be able to plan
 a roadtrip and view available activities in the area and their locational relationship from potential parks to visit.
 
 ## Acceptance Criteria
 
-Given a database of national parks (specifically Colorado)
+Given a database of national parks
 When I search Colorado in the navigation bar
 Then I expect to be displayed a list of national parks within Colorado  
 Given a list of national parks within Colorado (or specified state)
@@ -32,7 +32,7 @@ Deploy application via URL below
 
 ## Usage
 
-![Home Screen of Application](assets/images/screenshot.png)
+![Application Search Results](images/Screenshot%202022-11-14%20113058.png))
 
 ## Credits
 
@@ -56,4 +56,4 @@ Go the extra mile and write tests for your application. Then provide examples on
 
 ## Application URL
 
-xyz: @ github.com
+[National Parks Search](https://slimshady079.github.io/National-Parks-Search/)
