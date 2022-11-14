@@ -4,22 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- jquery ui -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
-      integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     />
-    <!-- bootstrap css -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
+    <link rel="stylesheet" href="./assets/css/custom.css" />
     <!-- jquery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -27,75 +16,108 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- bootstrap js  -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>National Park Search</title>
+
+    <title>National Park Directory</title>
   </head>
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">
-            &times;
-          </button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">
-            Close
-          </button>
+  <body>
+    <nav class="">
+      <div class="">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="./images/icons8-map-64.png"
+            alt="pin Icon"
+            class="m-1 p-2"
+          />
+        </a>
+        <a class="navbar-brand fw-bolder text-dark" href="#"
+          >National Park Directory</a
+        >
+      </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="ImgHead">
+      <div class="color-overlay d-flex flex-column justify-content-around">
+        <section>
+          <h2 class="subHeading">FUN TRIP WITH THE FAMILY</h2>
+          <h1 class="heading">SHADY PLACES</h1>
+        </section>
+        <div class="form_container">
+          <div>
+            <!-- input form  -->
+            <form class="text-muted d-flex flex-row justify-content-between">
+              <input
+                id="stateSearchBox"
+                type="search"
+                placeholder="CO"
+                aria-label="Search"
+              />
+              <input
+                id="searchBox"
+                type="search"
+                placeholder="Great Sand Dunes"
+                aria-label="Search"
+              />
+              <section id="buttonSection" class="d-flex flex-row">
+                <div class="dropdown">
+                  <select class="select" name="" id="select">
+                    <option value=""></option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="Biking">Biking</option>
+                  </select>
+                </div>
+                <button id="search" type="submit">Search</button>
+              </section>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="Subtext">
+      <h3>Find Your Path</h3>
+    </div>
+    <div class="Subphrase">
+      <h3>Explore Endlessly</h3>
+    </div>
 
-  <body>
-    <main>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <a href="./assets/HTML/contact.html"> <li>Contact Us</li></a>
-        </ul>
-      </nav>
-      <h1>National Parks Directory</h1>
-      <!-- Getz adding Vertically centered modal -->
-      <div class="modal-dialog modal-dialog-centered" id="getzModal">
-        Please Enter a Value
-      </div>
-      <!-- Getz adding Vertically centered modal -->
-      <section>
-        <form class="form" action="" id="searchForm">
-          <input
-            id="stateSearchBox"
-            class="input"
-            type="text"
-            placeholder="state EX: CO"
-          />
-          <input id="searchBox" class="input" type="text" placeholder="park" />
-          <select class="select" name="" id="select">
-            <option value=""></option>
-            <option value="Hiking">Hiking</option>
-            <option value="Camping">Camping</option>
-            <option value="Swimming">Swimming</option>
-            <option value="Biking">Biking</option>
-          </select>
-          <button class="search" id="searchBtn">Search</button>
-        </form>
+    <footer class="max-height: 100%">
+      <!-- main footer content  -->
+      <section id="footer_main">
+        <aside id="credits">
+          <h5>Credits</h5>
+          <p>Icons by Icons8 free license</p>
+          <ul>
+            <li>
+              <a href="https://icons8.com/icon/set/flags/stickers">Flags</a>
+            </li>
+            <li>
+              <a href="https://icons8.com/icon/set/maps/color">Compass</a>
+            </li>
+            <li>
+              <a href="https://icons8.com/icons/set/map">Map</a>
+            </li>
+            <li>
+              <a href="https://icons8.com/icons/set/github-logo">gitHub Icon</a>
+            </li>
+          </ul>
+        </aside>
+        <aside id="github">
+          <a href="#results-top"
+            ><img
+              id="compass"
+              src="./images/icons8-github-squared-100.png"
+              alt="pin Icon"
+            />
+          </a>
+        </aside>
+        <aside id="contact">
+          <a href="./contact.html"><p>Contact Page</p></a>
+        </aside>
       </section>
-    </main>
-    <footer>
-      <!-- removed buttons getz -->
-
-      <!-- <button>Michael</button>
-      <button>Drew</button>
-      <button>Jackson</button>
-      <button>Makayla</button>
-      <button>Max</button> -->
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
       integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
