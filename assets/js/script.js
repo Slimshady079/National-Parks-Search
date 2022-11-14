@@ -10,35 +10,35 @@ var parksArr = [];
 var searchFillArr = [];
 var searchResultArr = [];
 var stateFlags = {
-  AK: "./images/flags/icons8-alaska-flag-100.png",
-  AZ: "./images/flags/icons8-arizona-flag-100.png",
-  AR: "./images/flags/icons8-arkansas-flag-100.png",
-  CA: "./images/flags/icons8-california-flag-100.png",
-  CO: "./images/flags/coloradoFlagIcon.png",
-  FL: "./images/flags/icons8-florida-flag-100.png",
-  HI: "./images/flags/icons8-hawaii-flag-100.png",
-  ID: "./images/flags/icons8-idaho-flag-100.png",
-  IN: "./images/flags/icons8-indiana-flag-100.png",
-  KY: "./images/flags/icons8-kentucky-flag-100.png",
-  ME: "./images/flags/icons8-maine-flag-100.png",
-  MI: "./images/flags/icons8-michigan-flag-100.png",
-  MN: "./images/flags/icons8-minnesota-flag-100.png",
-  MT: "./images/flags/icons8-montana-flag-100.png",
-  NV: "./images/flags/icons8-nevada-flag-100.png",
-  NM: "./images/flags/icons8-new-mexico-flag-100.png",
-  NC: "./images/flags/icons8-north-carolina-flag-100.png",
-  ND: "./images/flags/icons8-north-dakota-flag-100.png",
-  OH: "./images/flags/icons8-ohio-flag-100.png",
-  OR: "./images/flags/icons8-oregon-flag-100.png",
-  SC: "./images/flags/icons8-south-carolina-flag-100.png",
-  SD: "./images/flags/icons8-south-dakota-flag-100.png",
-  TN: "./images/flags/icons8-tennessee-flag-100.png",
-  TX: "./images/flags/icons8-texas-flag-100.png",
-  UT: "./images/flags/icons8-utah-flag-100.png",
-  VA: "./images/flags/icons8-virginia-flag-100.png",
-  WA: "./images/flags/icons8-washington-flag-100.png",
-  WV: "./images/flags/icons8-west-virginia-flag-100.png",
-  WY: "./images/flags/icons8-wyoming-flag-100.png",
+  AK: "../../images/flags/icons8-alaska-flag-100.png",
+  AZ: "../../images/flags/icons8-arizona-flag-100.png",
+  AR: "../../images/flags/icons8-arkansas-flag-100.png",
+  CA: "../../images/flags/icons8-california-flag-100.png",
+  CO: "../../images/flags/coloradoFlagIcon.png",
+  FL: "../../images/flags/icons8-florida-flag-100.png",
+  HI: "../../images/flags/icons8-hawaii-flag-100.png",
+  ID: "../../images/flags/icons8-idaho-flag-100.png",
+  IN: "../../images/flags/icons8-indiana-flag-100.png",
+  KY: "../../images/flags/icons8-kentucky-flag-100.png",
+  ME: "../../images/flags/icons8-maine-flag-100.png",
+  MI: "../../images/flags/icons8-michigan-flag-100.png",
+  MN: "../../images/flags/icons8-minnesota-flag-100.png",
+  MT: "../../images/flags/icons8-montana-flag-100.png",
+  NV: "../../images/flags/icons8-nevada-flag-100.png",
+  NM: "../../images/flags/icons8-new-mexico-flag-100.png",
+  NC: "../../images/flags/icons8-north-carolina-flag-100.png",
+  ND: "../../images/flags/icons8-north-dakota-flag-100.png",
+  OH: "../../images/flags/icons8-ohio-flag-100.png",
+  OR: "../../images/flags/icons8-oregon-flag-100.png",
+  SC: "../../images/flags/icons8-south-carolina-flag-100.png",
+  SD: "../../images/flags/icons8-south-dakota-flag-100.png",
+  TN: "../../images/flags/icons8-tennessee-flag-100.png",
+  TX: "../../images/flags/icons8-texas-flag-100.png",
+  UT: "../../images/flags/icons8-utah-flag-100.png",
+  VA: "../../images/flags/icons8-virginia-flag-100.png",
+  WA: "../../images/flags/icons8-washington-flag-100.png",
+  WV: "../../images/flags/icons8-west-virginia-flag-100.png",
+  WY: "../../images/flags/icons8-wyoming-flag-100.png",
 };
 var stateCodeArr = [
   "AK",
@@ -175,7 +175,7 @@ var fillSearchOption = function (object) {
 var storeArr = function (arr) {
   localStorage.removeItem("search");
   localStorage.setItem("search", JSON.stringify(arr));
-  document.location.href = "./results.html";
+  document.location.href = "./assets/HTML/results.html";
 };
 
 //combine park actives into one fancy object
