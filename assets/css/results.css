@@ -1,4 +1,6 @@
-
+:root {
+    scroll-behavior: smooth;
+}
 body{
     overflow: visible;
 }
@@ -23,6 +25,7 @@ p {
 
 h1 {
     padding: 15px;
+    font-size: 3.0rem;
 }
 
 nav img {
@@ -52,9 +55,13 @@ footer {
 footer #icon_container{
     display: flex;
     align-items: center;
-    background-color: #116f11;
+    background-color: #3a3131;
+    
 }
-
+/* bootsrap has priority so !important takes that prio back */
+.navbar {
+   background-color: rgba(255, 255, 255, 0) !important;
+}
 
 /* navbar animation  */
 @keyframes roll{
@@ -94,24 +101,28 @@ footer #icon_container{
 }
 
 #footerImgContainer{
-    height: 809px;
+    height: 840px;
     background-size: 100%;
     background-image: linear-gradient(to bottom, #c2d8de,#c2d8de00);
     
 }
 
 #footerImg{
-    width: 100vw;
+    /* width: 99vw; */
     position: absolute;
     z-index: -1;
 }
 
 #footer_main{
-    display: flex;
-    justify-content: space-between;
+    margin-left: 10px;
+    display: block;
     background-color: #3a3131;
-    height: 250px;
+    height: 190px;
     color: whitesmoke;
+}
+.footer-p {
+    display: flex;
+    justify-content: flex-start;
 }
 
 #footer_main aside{
@@ -138,7 +149,7 @@ footer #icon_container{
 
 
 .mainContent {
-    background-image: linear-gradient(rgb(172, 191, 166), #c2d8de);
+    background-image: linear-gradient(rgb(211, 212, 212), #c2d8de);
     padding-bottom: 35%;
 }
 .url {
@@ -166,14 +177,16 @@ footer #icon_container{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 414px;
-    color: black
+    color: black;
+    box-shadow: 5px 8px 3px rgba(128, 128, 128, 0.284);
 }
 
 .cards:hover {
     animation: cardsHover 0.5s;
     animation-iteration-count: 1;
    transform: scale(1.010); 
-    box-shadow: 5px 8px 3px rgba(128, 128, 128, 0.284);
+    box-shadow: 8px 11px 6px rgba(94, 94, 94, 0.284);
+    cursor: grab;
 }
 
 @keyframes cardsHover{
@@ -211,3 +224,6 @@ footer #icon_container{
     justify-self: end;
 }
 
+h5 {
+    font-size: 2rem;
+}

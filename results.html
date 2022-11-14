@@ -16,18 +16,17 @@
       <!-- main content  -->
       <div class="flex-row min-100-vh">
         <div class="col-12 col-md-12 mainContent">
-          <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="./index.html">
-              <img
-                src="./images/icons8-map-64.png"
-                alt="pin Icon"
-                class="m-1 p-2"
-              />
-            </a>
-          </nav>
-
           <div class="banner">
             <h1 class="results-p" id="results-top">Search Results</h1>
+            <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="./index.html">
+                <img
+                  src="./images/icons8-map-64.png"
+                  alt="pin Icon"
+                  class="m-1 p-2"
+                />
+              </a>
+            </nav>
           </div>
           <!-- flex container for result cards -->
           <section id="resultBox"></section>
@@ -37,7 +36,12 @@
     <!-- fade div -->
     <div id="fade"></div>
     <div id="footerImgContainer">
-      <img src="./images/guyOnMountain.jpeg" id="footerImg" alt="" />
+      <img
+        src="./images/guyOnMountain.jpeg"
+        class="img-fluid"
+        id="footerImg"
+        alt=""
+      />
     </div>
     <footer class="max-height: 100%">
       <div id="icon_container">
@@ -55,39 +59,39 @@
             class="m-1 p-2"
           />
         </a>
+        <a href="./contact.html"
+          ><p>
+            <img
+              src="./images/icons8-communication-64.png"
+              alt="communication"
+            /></p
+        ></a>
+        <a href="https://github.com/Slimshady079/National-Parks-Search"
+          ><img
+            id="compass"
+            src="./images/icons8-github-squared-100.png"
+            alt="pin Icon"
+          />
+        </a>
       </div>
       <!-- main footer content  -->
       <section id="footer_main">
-        <aside id="credits">
-          <h5>Credits</h5>
-          <p>Icons by Icons8 free license</p>
-          <ul>
-            <li>
-              <a href="https://icons8.com/icon/set/flags/stickers">Flags</a>
-            </li>
-            <li>
-              <a href="https://icons8.com/icon/set/maps/color">Compass</a>
-            </li>
-            <li>
-              <a href="https://icons8.com/icons/set/map">Map</a>
-            </li>
-            <li>
-              <a href="https://icons8.com/icons/set/github-logo">gitHub Icon</a>
-            </li>
-          </ul>
-        </aside>
-        <aside id="github">
-          <a href="#results-top"
-            ><img
-              id="compass"
-              src="./images/icons8-github-squared-100.png"
-              alt="pin Icon"
-            />
-          </a>
-        </aside>
-        <aside id="contact">
-          <a href="./contact.html"><p>Contact Page</p></a>
-        </aside>
+        <h5>Credits</h5>
+        <p class="footer-p">Icons by Icons8 free license</p>
+        <ul>
+          <li>
+            <a href="https://icons8.com/icon/set/flags/stickers">Flags</a>
+          </li>
+          <li>
+            <a href="https://icons8.com/icon/set/maps/color">Compass</a>
+          </li>
+          <li>
+            <a href="https://icons8.com/icons/set/map">Map</a>
+          </li>
+          <li>
+            <a href="https://icons8.com/icons/set/github-logo">gitHub Icon</a>
+          </li>
+        </ul>
       </section>
     </footer>
   </body>
