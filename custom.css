@@ -1,0 +1,111 @@
+.ImgHead{
+    background-image: url("../austin-farrington-unsplash.jpg");
+    /* background-position: center left 10% right 10px;  */
+    background-size: cover;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+
+    
+}
+
+.img
+.ImgHead:hover{
+    cursor: pointer;
+}
+.color-overlay{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+
+h1{
+    display: flex;
+    position: relative;
+    /* justify-content: flex-end; */
+    /* top: 100px; right :600px;  */
+    top: 1.8em; right: 6.5em;
+    color: azure;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    
+}
+h2{
+    display: flex;
+    position: relative;
+    top: 4.5em; right: 5.3em;
+    /* top: 75px; right :339px; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: palevioletred;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+   flex-direction: row;
+    justify-content: flex-end;
+    margin: 0%;
+    width: 100%;
+    height: 60vh;
+    padding: 15%;
+    
+    
+}
+.search-icon{
+    width: 10px;
+}
+.Subtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 2%;
+    font-weight: bolder;
+    color: palevioletred;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+    font-size: 0.5rem;
+
+}
+.Subphrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bolder;
+    font-size: larger;
+}
+#footerImgContainer{
+    height: 809px;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, #C2D8DE,#c2d8de00);
+}
+#footerImg{
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+#footer_main{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3A3131;
+    height: 250px;
+    color: whitesmoke;
+}
+#footer_main aside{
+    background-color: #3A3131;
+    margin: 2%;
+}
+
+@media (max-width: 768px){
+    .ImgHead{
+        min-height: 30vh;
+    }
+    .ImgHead{
+        font-size: calc(1.525rem +3.3vw) ;
+    }
+    
+}
+
