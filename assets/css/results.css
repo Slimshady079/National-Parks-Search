@@ -108,17 +108,21 @@ footer #icon_container{
 }
 
 #footerImg{
-    width: 100vw;
+    /* width: 99vw; */
     position: absolute;
     z-index: -1;
 }
 
 #footer_main{
-    display: flex;
-    justify-content: space-between;
+    margin-left: 10px;
+    display: block;
     background-color: #3a3131;
-    height: 250px;
+    height: 190px;
     color: whitesmoke;
+}
+.footer-p {
+    display: flex;
+    justify-content: flex-start;
 }
 
 #footer_main aside{
@@ -220,3 +224,6 @@ footer #icon_container{
     justify-self: end;
 }
 
+h5 {
+    font-size: 2rem;
+}
