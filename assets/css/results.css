@@ -97,11 +97,12 @@ nav img:hover {
 
 
     /* background image  */
-    height: 7%;
+    height: 40vh;
     background-image: url("../../images/campingBanner.jpg");
     filter: grayscale(50%);
     background-size: 100%;
-    background-position: center 55%;}
+    background-position: center 55%;
+}
 
 
 
@@ -176,6 +177,7 @@ nav img:hover {
     flex-direction: row;
     justify-self: end;
 }
+
 footer img:hover {
         animation: roll 0.5s;
         animation-iteration-count: 1;
