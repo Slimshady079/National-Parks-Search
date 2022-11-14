@@ -36,14 +36,14 @@ nav img:hover {
     animation: roll 0.5s;
     animation-iteration-count: 1;
     transform: scale(1.1);
-    filter: drop-shadow(3px 3px 2px rgb(158, 155, 155));
+    filter: drop-shadow(3px 3px 2px rgb(0, 0, 0));
 }
 
 footer img:hover {
     animation: roll 0.5s;
     animation-iteration-count: 1;
     transform: scale(1.1);
-    filter: drop-shadow(3px 3px 2px rgba(158, 155, 155, 0.388));
+    filter: drop-shadow(3px 3px 2px rgba(158, 155, 155, 0.13));
 }
 
 
@@ -130,22 +130,21 @@ footer #icon_container{
     margin: 2%;
 }
 
+#banner-text {
+    display: flex;
+   justify-content: center;
+}
+
 
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-
-
     /* background image  */
-    height: 40vh;
+    height: 50vh;
     background-image: url("../../images/campingBanner.jpg");
     filter: grayscale(50%);
     background-size: 100%;
     background-position: center 55%;
 }
-
 
 
 .mainContent {
@@ -226,4 +225,54 @@ footer #icon_container{
 
 h5 {
     font-size: 2rem;
+}
+
+@media only screen and (max-width: 1787px) {
+    #footerImgContainer{
+        height: 660px;        
+    }
+}
+
+@media only screen and (max-width: 1787px) {
+    #footerImgContainer{
+        height: 440px;
+    }
+}
+
+@media only screen and (max-width: 938px) {
+    #footerImgContainer{
+        height: 300px
+    }
+    .banner {
+        background-position: center 80%;
+    }
+
+}
+
+@media only screen and (max-width: 642px) {
+    #footerImgContainer{
+        height: 220px
+    }
+    .banner {
+        background-size: 200%;
+        background-position: center 100%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    #footerImgContainer{
+        height: 180px
+    }
+    .cards{
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    #footerImgContainer{
+        height: 170px
+    }
+    .cards{
+        width: 100vw;
+    }
 }
