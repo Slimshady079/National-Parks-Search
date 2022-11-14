@@ -243,16 +243,36 @@ h5 {
     #footerImgContainer{
         height: 300px
     }
+    .banner {
+        background-position: center 80%;
+    }
+
 }
 
 @media only screen and (max-width: 642px) {
     #footerImgContainer{
         height: 220px
     }
+    .banner {
+        background-size: 200%;
+        background-position: center 100%;
+    }
 }
 
 @media only screen and (max-width: 414px) {
     #footerImgContainer{
         height: 180px
+    }
+    .cards{
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    #footerImgContainer{
+        height: 170px
+    }
+    .cards{
+        width: 100vw;
     }
 }
