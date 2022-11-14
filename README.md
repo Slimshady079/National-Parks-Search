@@ -32,15 +32,19 @@ Deploy application via URL below
 
 ## Usage
 
-![Application Search Results](images/Screenshot%202022-11-14%20113058.png))
+![Application Search Results](images/Screenshot%202022-11-14%20113058.png)
 
 ## Credits
 
-Max Gibes: https://github.com/Slimshady079
-Jackson Grimm: https://github.com/Bdogy
-Makayla Cordova: https://github.com/Makayla00
-Mike Getz: https://github.com/mgetz34
-Drew Isaacs: https://github.com/NightlineCoder
+-Max Gibes: https://github.com/Slimshady079
+
+-Jackson Grimm: https://github.com/Bdogy
+
+-Makayla Cordova: https://github.com/Makayla00
+
+-Mike Getz: https://github.com/mgetz34
+
+-Drew Isaacs: https://github.com/NightlineCoder
 
 ## License
 
@@ -48,11 +52,11 @@ Refer to the license in the repo; MIT.
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Dynamic user input/API data relay 
 
-## Tests
+- Icon Animations 
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+- Modals 
 
 ## Application URL
 
