@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #001219;
+}
+#text-drop {
+    position: relative;
+    display: flex;
+    font-size: 100px;
+    font-family: arial;
+    font-weight: 900;
+}
+
+.h {
+    opacity: 0;
+    animation: drop .4s linear forwards;
+    color: #9b5de5;
+}
+
+.e {
+    opacity: 0;
+    animation: drop .4s linear forwards .2s;
+    color: #f15bb5;
+}
+
+.l {
+    opacity: 0;
+    animation: drop .4s linear forwards .4s;
+    color: #fee440;
+}
+
+.l2 {
+    opacity: 0;
+    animation: drop .4s linear forwards .6s;
+    color: #00bbf9;
+}
+
+.o {
+    opacity: 0;
+    animation: drop .4s linear forwards .8s;
+    color: #00f5d4;
+}
+
+.text {
+    opacity: 0;
+    animation: drop .4s linear forwards 1.7s;
+    color: #00f5d4;
+    font-size: 70px;
+}
+
+.navbar-brand {
+    opacity: 0;
+    animation: drop .4s linear forwards 3s;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px) scaleY(0.9);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: .7;
+    }
+
+    50% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
+    }
+
+    65% {
+        transform: translateY(-17px) scaleY(.9);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-22px) scaleY(.9);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
+    }
+}
+
+.smile {
+    opacity: 0;
+    animation: drop .4s linear forwards 1.2s;
+    color: #9b5de5;
+    font-size: 90px;
+    margin-left: 15px;
+}
