@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="./assets/css/results.css" />
   </head>
-  <body>
+  <body class="">
     <main>
       <!-- main content  -->
       <div class="flex-row min-100-vh">
@@ -27,7 +27,7 @@
           </nav>
 
           <div class="banner">
-            <h1 class="results-p">Search Results</h1>
+            <h1 class="results-p" id="results-top">Search Results</h1>
           </div>
           <!-- flex container for result cards -->
           <section id="resultBox"></section>
@@ -39,7 +39,14 @@
     <div id="footerImgContainer">
       <img src="./images/guyOnMountain.jpeg" id="footerImg" alt="" />
     </div>
+    <footer class="max-height: 100%">
+      <a class="footer-brand" href="./index.html">
+        <img src="./images/parkPinIcon.png" alt="pin Icon" class="m-1 p-2" />
+      </a>
+      <a href="#results-top">this</a>
+    </footer>
   </body>
+
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
