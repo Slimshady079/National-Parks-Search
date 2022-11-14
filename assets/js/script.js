@@ -300,6 +300,7 @@ var npsData = [];
 
 //onclick for search
 searchBtn.click(function (event) {
+  localStorage.removeItem("search");
   event.preventDefault();
   search = searchBox.val();
   dropDown = selectBox.val();
