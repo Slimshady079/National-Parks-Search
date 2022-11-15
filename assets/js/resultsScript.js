@@ -119,7 +119,7 @@ if (results.length !== 0) {
   //element text
   errorTitle.text("Lost the trail?");
   text.text(
-    "If you search by state and park, be sure the park is inside of the state you entered"
+    "If you search by state and park, be sure the park is inside of the state you entered. Be sure that your state has a national park and monument!!!"
   );
   icon.attr("src", "../../images/icons8-trail-96.png");
   cardError.append(icon);
