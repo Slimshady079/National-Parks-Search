@@ -240,11 +240,14 @@ var parksArrSearch = function (search, dropDown, state) {
   console.log(dropDown);
 
   //removed error test cases for later version to use modal.
-  //error test cases
-  // if (search === "" && dropDown === "" && state === "") {
-  //   $("#myModal").modal();
-  //   return;
-  // }
+
+  if (search === "" && dropDown !== "" && state === "") {
+    //if user has an invalid input then it will set the 0 array index to undefined, this will check if it is undefined and if so will pass to sort with a empty array and bring user to search error page
+    if (searchResultArr[0] === undefined) {
+      storeArr([]);
+    }
+    return;
+  }
 
   // if (dropDown === "" && state !== "") {
   //   $("#myModal").modal();
@@ -301,7 +304,10 @@ var parksArrSearch = function (search, dropDown, state) {
   }
   //return to global scope
   console.log(searchResultArr);
-  //takes user to results page
+  //if user has an invalid input then it will set the 0 array index to undefined, this will check if it is undefinded and if so will pass to sort with a empty array and bring user to search error page
+  if (searchResultArr[0] === undefined) {
+    storeArr([]);
+  }
   parkInfoSearch(state);
   return searchResultArr;
 };
@@ -346,6 +352,7 @@ var npsData = [];
 //onclick for search
 searchBtn.click(function (event) {
   localStorage.removeItem("search");
+  localStorage.clear();
   event.preventDefault();
   search = searchBox.val();
   dropDown = selectBox.val();
