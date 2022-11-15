@@ -195,21 +195,23 @@ var parkActivityCombine = function (arr) {
 var parksArrSearch = function (search, dropDown, state) {
   console.log(search);
   console.log(dropDown);
+
+  //removed error test cases for later version to use modal.
   //error test cases
-  if (search === "" && dropDown === "" && state === "") {
-    $("#myModal").modal();
-    return;
-  }
+  // if (search === "" && dropDown === "" && state === "") {
+  //   $("#myModal").modal();
+  //   return;
+  // }
 
-  if (dropDown === "" && state !== "") {
-    $("#myModal").modal();
-    return;
-  }
+  // if (dropDown === "" && state !== "") {
+  //   $("#myModal").modal();
+  //   return;
+  // }
 
-  if (dropDown !== "" && state === "") {
-    $("#myModal").modal();
-    return;
-  }
+  // if (dropDown !== "" && state === "") {
+  //   $("#myModal").modal();
+  //   return;
+  // }
 
   if (search === "" && dropDown !== "") {
     console.log("search by drop down");

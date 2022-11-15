@@ -107,7 +107,6 @@ if (results.length !== 0) {
     currentWeather(lat, long, i);
   }
 } else {
-  //max add code here
   console.log("no value");
   //creates elements
   var box = $("#resultBox");
