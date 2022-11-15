@@ -215,6 +215,13 @@ max-height: 100px;
 background-color: white;
   }
 
+/* selected park from autofill displays at bottom of page this hide it
+  TODO: fix without !important
+*/
+  .ui-helper-hidden-accessible{
+    display:none !important;
+}
+
 @media (max-width: 768px){
     .ImgHead{
         min-height: 30vh;
