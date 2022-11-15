@@ -110,8 +110,10 @@ nav img {
     height: 100%;
     border-color: transparent;
     background-color:#bae9d3;
-    color:white;
+    color:rgb(0, 0, 0);
     font-size: large;
+    text-shadow: 0.002 #00000069;
+    text-align: center;
 }
 
 #search{
