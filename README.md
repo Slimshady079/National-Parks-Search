@@ -32,7 +32,7 @@ Deploy application via URL below
 
 ## Usage
 
-![Application Search Results](images/Screenshot%202022-11-14%20113058.png)
+![Application Home Screen](images/Screenshot%202022-11-14%20211015.png)
 
 ## Credits
 
@@ -52,11 +52,11 @@ Refer to the license in the repo; MIT.
 
 ## Features
 
-- Dynamic user input/API data relay 
+- Dynamic user input/API data relay
 
-- Icon Animations 
+- Icon Animations
 
-- Modals 
+- Modals
 
 ## Application URL
 
