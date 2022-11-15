@@ -243,3 +243,18 @@ background-color: white;
         border-radius: 0;
     }
 }
+
+
+@media only screen and (max-width: 650px) {
+    .form_container{
+        border-radius: 0;
+        padding-left: 0;
+    }
+    #footer_main{
+        display: flex;
+        justify-content: space-between;
+        background-color: #3A3131;
+        height: 300px;
+        color: whitesmoke;
+    }
+}
