@@ -127,3 +127,5 @@ if (results.length !== 0) {
   cardError.append(text);
   box.append(cardError);
 }
+
+localStorage.removeItem("search");
