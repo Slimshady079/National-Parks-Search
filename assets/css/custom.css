@@ -125,6 +125,48 @@ nav img {
     border-bottom-right-radius: 20%;
 }
 
+#cardTitle {
+    font-size: 1.2rem;
+}
+
+
+#quoteBox{
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #198754;
+}
+
+#quoteBox div{
+    margin-left:75%;
+}
+
+
+#quoteBox h3{
+    font-size: 2.1rem;
+    color: white;
+}
+
+#quoteBox p{
+    color: white;
+}
+
+#mainCredit{
+    font-size: 16px;
+}
+#smallerCredit{
+    margin-left: 50%;
+    font-size: 13px;
+}
+
+#evenSmaller{
+    margin-left: 75%;
+    font-size: 10px;
+}
+
+
+
 .form_container {
     font-size: 20px;
     margin-left:2%;
@@ -133,7 +175,6 @@ nav img {
     border-bottom-right-radius: 20%;
     background-color: white;
     width: 40%;
-
 }
 
 .cardBox{
@@ -154,6 +195,7 @@ nav img {
     margin: 2%;
     text-align: center;
 }
+
 
 
 
