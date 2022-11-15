@@ -16,7 +16,7 @@ function currentWeather(lat, lon, i) {
     .then(function (data) {
       console.log(data);
       var temp = $("<p>");
-      temp.text("Temperature " + data.main.temp + "F");
+      temp.text("CURRENT TEMP " + data.main.temp + "F");
       buildCards(results, temp, i);
     });
 }
