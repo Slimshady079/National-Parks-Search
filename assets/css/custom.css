@@ -1,28 +1,24 @@
 .ImgHead{
-    background-image: url("../austin-farrington-unsplash.jpg");
-    /* background-position: center left 10% right 10px;  */
+    background-image: url("../../images/mainBanner.jpg");
+    background-position: center left 10% right 10px; 
     background-size: cover;
     width: 100%;
+    height: 100vh;
     min-height: 60vh;
     position: relative;
 
     
 }
 
-.img
-.ImgHead:hover{
-    cursor: pointer;
-}
 .color-overlay{
    position: absolute;
    width: 100%;
    height: 100%;
-   background-color: rgba(0, 0, 0, 0.3);
+   background-color: rgba(0, 0, 0, 0.468);
 }
 
+
 h1{
-    display: flex;
-    position: relative;
     /* justify-content: flex-end; */
     /* top: 100px; right :600px;  */
     top: 1.8em; right: 6.5em;
@@ -32,14 +28,16 @@ h1{
     
 }
 h2{
-    display: flex;
-    position: relative;
     top: 4.5em; right: 5.3em;
     /* top: 75px; right :339px; */
     font-size: 1.2rem;
     font-weight: bold;
     color: palevioletred;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav img {
+    width: 60px;
 }
 
 .container{
@@ -54,14 +52,12 @@ h2{
     
     
 }
+
+
 .search-icon{
     width: 10px;
 }
-.Subtext{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.subtext{
     margin-top: 2%;
     font-weight: bolder;
     color: palevioletred;
@@ -69,14 +65,18 @@ h2{
     font-size: 0.5rem;
 
 }
-.Subphrase{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+
+.subHeading{
+    margin-left:3%;
+    text-align: left;
     font-weight: bolder;
     font-size: larger;
 }
+
+.heading {
+    margin-left:2%;
+}
+
 #footerImgContainer{
     height: 809px;
     background-size: 100%;
@@ -98,6 +98,58 @@ h2{
     background-color: #3A3131;
     margin: 2%;
 }
+
+#stateSearchBox {
+    border: none;
+}
+#searchBox{
+    border: none;
+}
+
+#select{
+    height: 100%;
+    border-color: transparent;
+    background-color:#bae9d3;
+    color:rgb(0, 0, 0);
+    font-size: large;
+    text-shadow: 0.002 #00000069;
+    text-align: center;
+}
+
+#search{
+    border-color: transparent;
+    color:white;
+    background-color:#198754;
+    padding-right: 4px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.form_container {
+    font-size: 20px;
+    margin-left:2%;
+    padding-left: 20px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-color: white;
+    width: 40%;
+
+}
+
+.ui-autocomplete {
+    list-style: none;
+    background-color: white;
+    width: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+* html .ui-autocomplete {
+width: 100px;
+max-height: 100px;
+background-color: white;
+  }
 
 @media (max-width: 768px){
     .ImgHead{

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jquery ui -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+      integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- bootstrap js  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>National Park Search</title>
+  </head>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <main>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <a href="./assets/HTML/contact.html"> <li>Contact Us</li></a>
+        </ul>
+      </nav>
+      <h1>National Parks Directory</h1>
+      <!-- Getz adding Vertically centered modal -->
+      <div class="modal-dialog modal-dialog-centered" id="getzModal">
+        Please Enter a Value
+      </div>
+      <!-- Getz adding Vertically centered modal -->
+      <section>
+        <form class="form" action="" id="searchForm">
+          <input
+            id="stateSearchBox"
+            class="input"
+            type="text"
+            placeholder="state EX: CO"
+          />
+          <input id="searchBox" class="input" type="text" placeholder="park" />
+          <select class="select" name="" id="select">
+            <option value=""></option>
+            <option value="Hiking">Hiking</option>
+            <option value="Camping">Camping</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Biking">Biking</option>
+          </select>
+          <button class="search" id="searchBtn">Search</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!-- removed buttons getz -->
+
+      <!-- <button>Michael</button>
+      <button>Drew</button>
+      <button>Jackson</button>
+      <button>Makayla</button>
+      <button>Max</button> -->
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script src="./assets/js/script.js"></script> -->
+  </body>
+</html>
