@@ -58,6 +58,10 @@ footer #icon_container{
     background-color: #3a3131;
     
 }
+
+h1 {
+    text-align: center;
+}
 /* bootsrap has priority so !important takes that prio back */
 .navbar {
    background-color: rgba(255, 255, 255, 0) !important;
