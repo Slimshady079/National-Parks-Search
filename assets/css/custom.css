@@ -223,6 +223,30 @@ background-color: white;
     display:none !important;
 }
 
+
+
+
+@media (max-width: 1025px){
+    #form {
+        flex-direction: column;
+        border-radius: 0;
+    }
+    #banner{
+        align-items: center;
+    }
+    #search {
+        width: 100%;
+        border-radius: 0;
+    }
+    .form_container{
+        border-radius: 0;
+        padding-left: 0;
+    }
+    
+}
+
+
+
 @media (max-width: 768px){
     .ImgHead{
         min-height: 30vh;
