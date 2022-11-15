@@ -136,6 +136,27 @@ nav img {
 
 }
 
+.cardBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardBox div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    width: 380px;
+    height: 250px;
+}
+.cardBox div p{
+    margin: 2%;
+    text-align: center;
+}
+
+
+
 .ui-autocomplete {
     list-style: none;
     background-color: white;
