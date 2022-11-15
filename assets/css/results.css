@@ -238,17 +238,19 @@ h5 {
     font-size: 2rem;
 }
 
-@media only screen and (max-width: 1787px) {
+@media only screen and (max-width: 1788px) {
     #footerImgContainer{
-        height: 660px;        
+        height: 600px;        
     }
 }
 
-@media only screen and (max-width: 1787px) {
+@media only screen and (max-width: 1293px) {
     #footerImgContainer{
-        height: 440px;
+        height: 450px;        
     }
 }
+
+
 
 @media only screen and (max-width: 938px) {
     #footerImgContainer{
