@@ -109,4 +109,22 @@ if (results.length !== 0) {
 } else {
   //max add code here
   console.log("no value");
+  //creates elements
+  var box = $("#resultBox");
+  var cardError = $("<div>");
+  cardError.addClass("errorCard");
+  var errorTitle = $("<h2>");
+  var text = $("<p>");
+  var icon = $("<img>");
+
+  //element text
+  errorTitle.text("Lost the trail?");
+  text.text(
+    "If you search by state and park, be sure the park is inside of the state you entered"
+  );
+  icon.attr("src", "../../images/icons8-trail-96.png");
+  cardError.append(icon);
+  cardError.append(errorTitle);
+  cardError.append(text);
+  box.append(cardError);
 }
